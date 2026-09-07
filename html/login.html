@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - UC2 REaproveita!</title>
+    <!-- Reaproveita o mesmo CSS do site para manter o fundo borrado -->
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <!-- Container Flex para centralizar os cards na tela inteira -->
+    <div class="login-wrapper">
+
+        <!-- CARD 1: CONSUMIDOR -->
+        <div class="login-card">
+            <div class="icon-circle">
+                <!-- Substitua pelo caminho da sua imagem -->
+                <img src="../imagens/loginConsumidor.png" alt="Consumidor" class="shrink-img">
+            </div>
+            
+            <h2>Consumidor</h2>
+            
+            <!-- Formulário de Login -->
+            <form class="login-form">
+                <input type="email" placeholder="Seu E-mail" required>
+                <input type="password" placeholder="Sua Senha" required>
+                <button type="submit" class="btn-login">Entrar</button>
+            </form>
+            
+            <!-- Opção de Cadastro -->
+            <div class="login-footer">
+                <span>Não tem uma conta?</span>
+                <a href="#">Cadastre-se</a>
+            </div>
+        </div>
+
+        <!-- CARD 2: EMPRESA -->
+        <div class="login-card">
+            <div class="icon-circle">
+                <!-- Substitua pelo caminho da sua imagem -->
+                <img src="../imagens/loginEmpresa.png" alt="Empresa">
+            </div>
+            
+            <h2>Empresa</h2>
+            
+            <!-- Formulário de Login -->
+            <form class="login-form">
+                <input type="email" placeholder="E-mail Corporativo" required>
+                <input type="password" placeholder="Senha" required>
+                <button type="submit" class="btn-login">Entrar</button>
+            </form>
+            
+            <!-- Opção de Cadastro -->
+            <div class="login-footer">
+                <span>Quer ser um parceiro?</span>
+                <a href="#">Cadastre sua Empresa</a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
