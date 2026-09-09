@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo - REaproveita!</title>
+    <link rel="stylesheet" href="/catalogo.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <img src="/imagens/logoTeste.jpg" alt="Logo REaproveita!" class="logo-img">
+            <h1 class="logo-text">REaproveita!</h1>
+        </div>
+
+        <nav class="nav-links">
+            <a href="#">Catalogo</a>
+            <a href="#">Como funciona</a>
+            <a href="#">Sobre</a>
+            <a href="#">Contato</a>
+        </nav>
+
+        <div class="user-actions">
+            <div class="search-container">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="search-icon">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="text" placeholder="Buscar por materiais" class="search-input">
+            </div>
+
+            <a href="html/login.html" target="_blank" aria-label="Ir para a página de login">
+                <img src="/imagens/iconeTeste.jpg" alt="Foto de Perfil" class="profile-pic">
+            </a>
+        </div>
+    </header>
+
+
+    <div class="container">
+
+        <!-- BARRA LATERAL (FILTROS) -->
+        <aside class="sidebar">
+
+            <!-- Filtro 1: Tipo de Material -->
+            <div class="filter-group open">
+                <div class="filter-title">
+                    <span>Tipo de Material</span>
+                    <span class="arrow">&#9650;</span>
+                </div>
+                <div class="filter-content">
+                    <div class="checkbox-list">
+                        <label><input type="checkbox"> Plastico</label>
+                        <label><input type="checkbox"> Algodão</label>
+                        <label><input type="checkbox"> Aluminio</label>
+                        <label><input type="checkbox"> Eletronicos</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filtro 2: Quantidade -->
+            <div class="filter-group open">
+                <div class="filter-title">
+                    <span>Quantidade</span>
+                    <span class="arrow">&#9650;</span>
+                </div>
+                <div class="filter-content">
+                    <div class="range-container">
+                        <div class="range-label">kg/tons</div>
+                        <input type="range" class="range-slider" min="0" max="1000" value="500">
+                        <div class="range-values">
+                            <span>0</span>
+                            <span>1000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filtro 3: Localização -->
+            <div class="filter-group open">
+                <div class="filter-title">
+                    <span>Localização</span>
+                    <span class="arrow">&#9650;</span>
+                </div>
+                <div class="filter-content">
+                    <div class="map-preview">
+                        <img src="https://maps.app.goo.gl/SsgLv6s88mxEqJ1V6" alt="Mapa">
+                    </div>
+                    <input type="text" class="input-city" placeholder="Cidade">
+                </div>
+            </div>
+
+            <!-- Filtros Recolhidos -->
+            <div class="filter-group">
+                <div class="filter-title">
+                    <span>Preço</span>
+                    <span class="arrow">&#9660;</span>
+                </div>
+                <div class="filter-content">
+                    <p style="padding-top: 10px; font-size: 13px;">Opções de preço...</p>
+                </div>
+            </div>
+
+
+
+        </aside>
+
+        <!-- CONTEÚDO PRINCIPAL DA PÁGINA -->
+        <main class="main-content">
+
+            <!-- Cabeçalho superior com o botão de criar postagem -->
+            <header class="top-bar">
+                <button id="btnOpenModal" class="btn-create-post">+ Anunciar Novo Material</button>
+            </header>
+
+            <!-- GRID DE CARD DE PRODUTOS -->
+            <div class="products-grid">
+
+                <!-- Card 1 -->
+                <div class="card">
+                    <img class="card-image" src="/imagens/papelao.jpg" alt="Fardos de papelão">
+                    <div class="card-content">
+                        <div class="card-title">Fardos de papelão</div>
+                        <div class="card-info">🛍️ 1200kg</div>
+                        <div class="card-info">📍 Campinas, SP</div>
+                        <div class="card-price">R$ 0,50/kg</div>
+                        <div class="card-footer">
+                            <img class="avatar" src="https://i.pravatar.cc/100?img=12" alt="Usuário">
+                            <button class="btn-details">Ver detalhes</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Demais cards de exemplo -->
+                <div class="card"><img class="card-image" src="/imagens/e097569ced69dd130628dfa6872de2bb.jpg" alt="Fardos de papelão">
+                    <div class="card-content">
+                        <div class="card-title">Fardos de papelão</div>
+                        <div class="card-info">🛍️ 1200kg</div>
+                        <div class="card-info">📍 Campinas, SP</div>
+                        <div class="card-price">R$ 0,50/kg</div>
+                        <div class="card-footer"><img class="avatar" src="https://i.pravatar.cc/100?img=12"
+                                alt="Usuário"><button class="btn-details">Ver detalhes</button></div>
+                    </div>
+                </div>
+                <div class="card"><img class="card-image" src="/imagens/8ce8be7522feedf144bef6801ff84100.jpg" alt="Fardos de papelão">
+                    <div class="card-content">
+                        <div class="card-title">Fardos de papelão</div>
+                        <div class="card-info">🛍️ 1200kg</div>
+                        <div class="card-info">📍 Campinas, SP</div>
+                        <div class="card-price">R$ 0,50/kg</div>
+                        <div class="card-footer"><img class="avatar" src="https://i.pravatar.cc/100?img=12"
+                                alt="Usuário"><button class="btn-details">Ver detalhes</button></div>
+                    </div>
+                </div>
+                <div class="card"><img class="card-image" src="/imagens/9e9ee61df06df048e219933e56cdf6dd.jpg" alt="Fardos de papelão">
+                    <div class="card-content">
+                        <div class="card-title">Fardos de papelão</div>
+                        <div class="card-info">🛍️ 1200kg</div>
+                        <div class="card-info">📍 Campinas, SP</div>
+                        <div class="card-price">R$ 0,50/kg</div>
+                        <div class="card-footer"><img class="avatar" src="https://i.pravatar.cc/100?img=12"
+                                alt="Usuário"><button class="btn-details">Ver detalhes</button></div>
+                    </div>
+                </div>
+                <div class="card"><img class="card-image" src="/imagens/75e516fbb9aa4ba991e108759ccb42f6.jpg" alt="Fardos de papelão">
+                    <div class="card-content">
+                        <div class="card-title">Fardos de papelão</div>
+                        <div class="card-info">🛍️ 1200kg</div>
+                        <div class="card-info">📍 Campinas, SP</div>
+                        <div class="card-price">R$ 0,50/kg</div>
+                        <div class="card-footer"><img class="avatar" src="https://i.pravatar.cc/100?img=12"
+                                alt="Usuário"><button class="btn-details">Ver detalhes</button></div>
+                    </div>
+                </div>
+                <div class="card"><img class="card-image" src="/imagens/papelao.jpg" alt="Fardos de papelão">
+                    <div class="card-content">
+                        <div class="card-title">Fardos de papelão</div>
+                        <div class="card-info">🛍️ 1200kg</div>
+                        <div class="card-info">📍 Campinas, SP</div>
+                        <div class="card-price">R$ 0,50/kg</div>
+                        <div class="card-footer"><img class="avatar" src="https://i.pravatar.cc/100?img=12"
+                                alt="Usuário"><button class="btn-details">Ver detalhes</button></div>
+                    </div>
+                </div>
+                <div class="card"><img class="card-image" src="/imagens/75e516fbb9aa4ba991e108759ccb42f6.jpg" alt="Fardos de papelão">
+                    <div class="card-content">
+                        <div class="card-title">Fardos de papelão</div>
+                        <div class="card-info">🛍️ 1200kg</div>
+                        <div class="card-info">📍 Campinas, SP</div>
+                        <div class="card-price">R$ 0,50/kg</div>
+                        <div class="card-footer"><img class="avatar" src="https://i.pravatar.cc/100?img=12"
+                                alt="Usuário"><button class="btn-details">Ver detalhes</button></div>
+                    </div>
+                </div>
+                <div class="card"><img class="card-image" src="/imagens/e097569ced69dd130628dfa6872de2bb.jpg" alt="Fardos de papelão">
+                    <div class="card-content">
+                        <div class="card-title">Fardos de papelão</div>
+                        <div class="card-info">🛍️ 1200kg</div>
+                        <div class="card-info">📍 Campinas, SP</div>
+                        <div class="card-price">R$ 0,50/kg</div>
+                        <div class="card-footer"><img class="avatar" src="https://i.pravatar.cc/100?img=12"
+                                alt="Usuário"><button class="btn-details">Ver detalhes</button></div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- ================= TELA / MODAL DE ANUNCIAR NOVO MATERIAL ================= -->
+    <div id="modalAnnounce" class="modal-overlay">
+        <div class="modal-box">
+
+            <!-- Botão para Fechar o Modal -->
+            <button id="btnCloseModal" class="btn-close">&times;</button>
+
+            <h2 class="modal-header-title">ANUNCIAR NOVO MATERIAL</h2>
+
+            <!-- NAVEGAÇÃO DE PASSO A PASSO (TAB-BAR) -->
+            <div class="modal-tabs">
+                <div class="tab-item active" data-tab="step-1">1. Detalhes</div>
+                <div class="tab-item" data-tab="step-2">2. Fotos</div>
+                <div class="tab-item" data-tab="step-3">3. Localização</div>
+                <div class="tab-item" data-tab="step-4">4. Publicar</div>
+            </div>
+
+            <!-- CORPO DO FORMULÁRIO -->
+            <div class="modal-body">
+
+                <div id="step-1" class="tab-content active">
+                    <div class="form-layout">
+                        <div class="form-left">
+                            <div class="form-group">
+                                <label>Tipo de Material</label>
+                                <select class="form-input">
+                                    <option>Papelão Ondulado</option>
+                                    <option>Plástico</option>
+                                    <option>Alumínio</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Quantidade Estimada</label>
+                                <input type="text" class="form-input" placeholder="1500kg">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Descrição</label>
+                                <textarea class="form-input textarea" placeholder="Fardos prensados, limpos"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Disponibilidade para Retirada</label>
+                                <input type="text" class="form-input" placeholder="08/09/2026">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Preço Esperado</label>
+                                <input type="text" class="form-input" placeholder="R$ 0,45/kg">
+                            </div>
+                        </div>
+
+                        
+                        </div>
+                    </div>
+
+                    <button class="btn-next-step">Próximo Passo</button>
+                </div>
+
+                <div id="step-2" class="tab-content">
+                    <div class="step-placeholder-box">
+                        <h3>Gerenciamento de Fotos</h3>
+                        <p>Espaço reservado para carregar e organizar fotos do material.</p>
+                        <div class="upload-placeholder large">
+                            <span class="upload-icon">📷</span>
+                            <p>Clique ou arraste suas fotos aqui</p>
+                        </div>
+                    </div>
+                    <button class="btn-next-step">Próximo Passo</button>
+                </div>
+
+            
+                <div id="step-3" class="tab-content">
+                    <div class="step-placeholder-box">
+                        <h3>Localização da Retirada</h3>
+                        <div class="form-group">
+                            <label>CEP / Endereço</label>
+                            <input type="text" class="form-input" placeholder="Digite o CEP ou Cidade">
+                        </div>
+                        <div class="map-preview" style="height: 180px; margin-top: 15px;">
+                            <img src="https://maps.googleapis.com/maps/api/staticmap?center=-23.528,-46.66&zoom=14&size=500x200&sensor=false&markers=color:red%7C-23.528,-46.66"
+                                alt="Mapa">
+                        </div>
+                    </div>
+                    <button class="btn-next-step">Próximo Passo</button>
+                </div>
+
+           
+                <div id="step-4" class="tab-content">
+                    <div class="step-placeholder-box" style="text-align: center;">
+                        <h3>Revisão e Publicação</h3>
+                        <p style="margin-top: 10px; color: #555;">Confira os dados do anúncio antes de publicar na
+                            plataforma.</p>
+                    </div>
+                    <button class="btn-next-step" style="background-color: #2E7D32;">Finalizar e Publicar</button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="/catalogo.js"></script>
+
+</body>
+
+</html>

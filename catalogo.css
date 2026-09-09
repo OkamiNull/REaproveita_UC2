@@ -1,0 +1,540 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a5c38;
+    padding: 10px 40px;
+    color: #ffffff;
+}
+
+/* Logo */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-img {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ffffff;
+    background-color: #ffffff;
+}
+
+.logo-text {
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* Nav bar header */
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 400;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.nav-links a:hover {
+    opacity: 0.7;
+}
+
+/* Ações do usuário (Busca + Perfil) */
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Caixa de pesquisa (opcional para alinhar o ícone com o input perfeitamente) */
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #ffffff;
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    font-size: 0.95rem;
+}
+
+/* Foto de perfil */
+.profile-pic {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ffffff;
+    display: block;
+}
+
+/* Configurações Globais */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #ECE9E9;
+  color: #333;
+  padding: 20px;
+}
+
+/* Container Principal */
+.container {
+  display: flex;
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Configurações Globais */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #ECE9E9;
+  color: #333;
+  /* Espaçamento no topo para afastar os cards do teto da tela */
+  padding: 35px 20px 20px 20px;
+}
+
+/* Container Principal */
+.container {
+  display: flex;
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ================= BARRA LATERAL (FILTROS) ================= */
+.sidebar {
+  width: 260px;
+  flex-shrink: 0;
+}
+
+
+
+.filter-group {
+  border-bottom: 1px solid #ccc;
+  padding: 15px 0;
+}
+
+.filter-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.arrow {
+  font-size: 12px;
+}
+
+.filter-content {
+  display: none;
+}
+
+.filter-group.open .filter-content {
+  display: block;
+}
+
+.checkbox-list {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+  color: #444;
+}
+
+.checkbox-list label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.range-container {
+  margin-top: 15px;
+}
+
+.range-label {
+  font-size: 10px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.range-slider {
+  width: 100%;
+  accent-color: #333;
+}
+
+.range-values {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #666;
+  margin-top: 2px;
+}
+
+.map-preview {
+  width: 100%;
+  height: 100px;
+  background-color: #d8e2ea;
+  border-radius: 8px;
+  margin-top: 10px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+}
+
+.map-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.input-city {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #fff;
+  background-color: #fff;
+  margin-top: 15px;
+  font-size: 14px;
+  outline: none;
+  color: #666;
+}
+
+/*ÁREA DE CONTEÚDO PRINCIPAL */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 5px;
+}
+
+
+
+.btn-create-post {
+  background-color: #2E7D32;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.btn-create-post:hover {
+  background-color: #1b5e20;
+}
+
+
+/* GRID DE PRODUTOS */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background-color: #D9D9D9;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.card-image {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+}
+
+.card-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 4px;
+}
+
+.card-info {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #444;
+}
+
+.card-price {
+  font-weight: bold;
+  font-size: 13px;
+  margin-top: 4px;
+  color: #111;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 10px;
+}
+
+.avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.btn-details {
+  background-color: #2E7D32;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-details:hover {
+  background-color: #1b5e20;
+}
+
+
+
+/* ESTILOS DA TELA / MODAL DE ANÚNCIO */
+.modal-overlay {
+  display: none; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.modal-box {
+  background-color: #E2E2E2;
+  width: 650px;
+  max-width: 90%;
+  border-radius: 4px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  border: none;
+  background: transparent;
+  font-size: 24px;
+  cursor: pointer;
+  color: #555;
+}
+
+.modal-header-title {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 15px 20px 10px 20px;
+  color: #111;
+  text-transform: uppercase;
+}
+
+/* Navegação por abas */
+.modal-tabs {
+  display: flex;
+  background-color: #CCCCCC;
+  border-bottom: 1px solid #BBB;
+}
+
+.tab-item {
+  flex: 1;
+  padding: 12px 5px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+.tab-item.active {
+  background-color: #2B7A3E;
+  color: #FFF;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.form-layout {
+  display: flex;
+  gap: 20px;
+}
+
+.form-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-right {
+  width: 220px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form-group label {
+  font-size: 12px;
+  font-weight: bold;
+  color: #666;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #FFF;
+  background-color: #FFF;
+  font-size: 13px;
+  outline: none;
+  color: #333;
+}
+
+.form-input.textarea {
+  height: 80px;
+  resize: none;
+}
+
+.upload-placeholder {
+  border: 2px dashed #999;
+  border-radius: 8px;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+  background-color: #D3D3D3;
+  padding: 10px;
+  text-align: center;
+}
+
+.upload-placeholder.large {
+  height: 180px;
+  margin-top: 15px;
+}
+
+.upload-icon {
+  font-size: 32px;
+  margin-bottom: 5px;
+}
+
+.upload-placeholder p {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.preview-thumb {
+  margin-top: 15px;
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+  overflow: hidden;
+  align-self: flex-start;
+}
+
+.preview-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Botão Próximo Passo */
+.btn-next-step {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.btn-next-step:hover {
+  background-color: #43a047;
+}
+
+.step-placeholder-box {
+  padding: 10px 0;
+}
