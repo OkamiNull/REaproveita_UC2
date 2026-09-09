@@ -538,3 +538,32 @@ body {
 .step-placeholder-box {
   padding: 10px 0;
 }
+
+/* Animação do ícone de reciclagem */
+@keyframes spin {
+  0% { 
+    opacity: 0.3; 
+    text-shadow: 0px 0px 0px lightgreen;
+    transform: rotate(0deg);
+  }
+  50% { 
+    opacity: 1; 
+    transform: rotate(180deg); 
+    text-shadow: 0px 0px 15px lightgreen;
+  }
+  100% { 
+    opacity: 0.3; 
+    transform: rotate(360deg); 
+    text-shadow: 0px 0px 0px lightgreen;
+  }
+}
+
+/* Estilo do ícone de reciclagem ajustado para o final da página */
+.icon-recycle {
+  color: #2E7D32;            /* Cor verde para combinar com seu projeto */
+  font-size: 40px;           /* Tamanho pequeno e discreto */
+  text-align: center;        /* Centraliza na largura da página */
+  margin: 30px auto 20px;    /* Margem para afastar do conteúdo e do footer */
+  width: fit-content;
+  animation: spin 6s linear infinite;
+}
