@@ -560,10 +560,10 @@ body {
 
 /* Estilo do ícone de reciclagem ajustado para o final da página */
 .icon-recycle {
-  color: #2E7D32;            /* Cor verde para combinar com seu projeto */
-  font-size: 40px;           /* Tamanho pequeno e discreto */
-  text-align: center;        /* Centraliza na largura da página */
-  margin: 30px auto 20px;    /* Margem para afastar do conteúdo e do footer */
+  color: #2E7D32;            
+  font-size: 50px;           
+  text-align: center;        
+  margin: 30px auto 20px;    
   width: fit-content;
   animation: spin 6s linear infinite;
 }
