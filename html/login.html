@@ -4,18 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - UC2 REaproveita!</title>
-    <!-- Reaproveita o mesmo CSS do site para manter o fundo borrado -->
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 
-    <!-- Container Flex para centralizar os cards na tela inteira -->
+        <header class="header">
+        <div class="logo-container">
+            <img src="../imagens/logoTeste.jpg" alt="Logo REaproveita!" class="logo-img">
+            <h1 class="logo-text">REaproveita!</h1>
+        </div>
+
+        <nav class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="#">Catalogo</a>
+            <a href="#">Como funciona</a>
+            <a href="#">Sobre</a>
+            <a href="#">Contato</a>
+        </nav>
+
+        <div class="user-actions">
+            <div class="search-container">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="search-icon"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <input type="text" placeholder="Buscar por materiais" class="search-input">
+            </div>
+            
+            <a href="../html/login.html" target="_blank" aria-label="Ir para a página de login">
+                <img src="../imagens/iconeTeste.jpg" alt="Foto de Perfil" class="profile-pic">
+            </a>
+        </div>
+    </header>
+
     <div class="login-wrapper">
 
         <!-- CARD 1: CONSUMIDOR -->
         <div class="login-card">
             <div class="icon-circle">
-                <!-- Substitua pelo caminho da sua imagem -->
                 <img src="../imagens/loginConsumidor.png" alt="Consumidor" class="shrink-img">
             </div>
             
@@ -31,14 +54,13 @@
             <!-- Opção de Cadastro -->
             <div class="login-footer">
                 <span>Não tem uma conta?</span>
-                <a href="#">Cadastre-se</a>
+                <a href="cadastroUsuario.html">Cadastre-se</a>
             </div>
         </div>
 
         <!-- CARD 2: EMPRESA -->
         <div class="login-card">
             <div class="icon-circle">
-                <!-- Substitua pelo caminho da sua imagem -->
                 <img src="../imagens/loginEmpresa.png" alt="Empresa">
             </div>
             
@@ -54,11 +76,57 @@
             <!-- Opção de Cadastro -->
             <div class="login-footer">
                 <span>Quer ser um parceiro?</span>
-                <a href="#">Cadastre sua Empresa</a>
+                <a href="cadastroEmpresa.html">Cadastre sua Empresa</a>
             </div>
         </div>
 
     </div>
+
+    <footer class="site-footer">
+    
+    <div class="footer-benefits">
+        
+        <div class="benefit-item">
+            <img src="../imagens/caminhãoDelivery.png" alt="Ícone de Caminhão" class="benefit-icon">
+            <div class="benefit-text">
+                <strong>Frete Grátis</strong>
+                <span>Em produtos selecionados<br>confira as regras</span>
+            </div>
+        </div>
+
+        <div class="benefit-item">
+            <img src="../imagens/relógio.png" alt="Ícone de Relógio" class="benefit-icon">
+            <div class="benefit-text">
+                <strong>Entrega Expressa</strong>
+                <span>A partir de 2 dias úteis<br>confira as regras</span>
+            </div>
+        </div>
+
+        <div class="benefit-item">
+            <img src="../imagens/cartãoCrédito.png" alt="Ícone de Cartão" class="benefit-icon">
+            <div class="benefit-text">
+                <strong>Em 10x Sem Juros</strong>
+                <span>No cartão de credito</span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-main">
+        <div class="footer-brand">
+            <img src="../imagens/logoTeste.jpg" alt="Logo REaproveita!" class="footer-logo">
+        </div>
+        
+        <nav class="footer-nav">
+            <a href="../index.html">Home</a>
+            <a href="#">Catalogo</a>
+            <a href="#">Como funciona</a>
+            <a href="#">Sobre</a>
+            <a href="#">Contato</a>
+        </nav>
+    </div>
+    
+</footer>
 
 </body>
 </html>
