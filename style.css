@@ -634,3 +634,137 @@ body::before {
     height: 85%;
     object-fit: contain;
 }
+
+/* =========================================
+   PÁGINA DE CADASTRO DE USUÁRIO
+   ========================================= */
+
+   /* card principal */
+.register-card {
+    background-color: rgba(17, 17, 17, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px 50px;
+    width: 100%;
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.register-card h2 {
+    color: #ffffff;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+/* form de cadastro */
+.register-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* titulos das sessoes */
+.form-section-title {
+    color: #4aff22;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: -5px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* grid duas colunas */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+/* inputs */
+.register-form input {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: #e5e5e5;
+    color: #333;
+    font-size: 0.95rem;
+    outline: none;
+    transition: box-shadow 0.2s ease;
+}
+
+.register-form input:focus {
+    box-shadow: 0 0 0 3px #4aff22; 
+}
+
+/* input tamanho total */
+.register-form input.full-width {
+    grid-column: span 2;
+}
+
+/* botao final */
+.btn-register {
+    margin-top: 25px;
+    padding: 16px;
+    font-size: 1.15rem;
+}
+
+/* responsividade */
+@media (max-width: 600px) {
+    .register-card {
+        padding: 30px 20px;
+    }
+    
+    .form-grid {
+        grid-template-columns: 1fr; 
+    }
+    
+    .register-form input.full-width {
+        grid-column: span 1;
+    }
+}
+
+/* container do input de senha */
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* icone do olho */
+.eye-icon {
+    position: absolute;
+    right: 15px;
+    width: 20px;
+    height: 20px;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.eye-icon:hover {
+    color: #333;
+}
+
+/* mensagem de verificacao de senha */
+.pass-msg {
+    font-size: 0.85rem;
+    margin-top: -10px;
+    display: block;
+    grid-column: span 2;
+}
+
+.pass-msg.erro {
+    color: #ff4d4d;
+}
+
+.pass-msg.sucesso {
+    color: #4aff22;
+}
