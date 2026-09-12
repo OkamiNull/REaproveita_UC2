@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+}
+
+#fundo_coleta_seletiva{
+    width: 100%;
+    height: 590px;
+    padding-top: 30px;
+    background-color: #135F3F;
+}
+
+#fundo_coleta_seletiva #fundo_branco_coleta_seletiva{
+    width: 90%;
+    height: 550px;
+    background-color: white;
+    margin: auto;
+    border-radius: 45px;
+    display: flex;
+    flex-direction: row;
+}
+
+#fundo_coleta_seletiva #fundo_branco_coleta_seletiva #selecao_jogo{
+    width: 50%;
+    height: 100%;
+    border-radius: 45px;
+    display: flex;
+    flex-direction: column;
+    background-image: url(../imagens/fundo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#fundo_coleta_seletiva #fundo_branco_coleta_seletiva #selecao_jogo #titulo{
+    width: 100%;
+    height: 40%;
+}
+
+#fundo_coleta_seletiva #fundo_branco_coleta_seletiva #selecao_jogo #titulo #placa{
+    width: 350px;
+    height: 100%;
+    margin-left: 250px;
+    background-image: url(../imagens/placa.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#fundo_coleta_seletiva #fundo_branco_coleta_seletiva #selecao_jogo #titulo #placa p{
+    padding-top: 105px;
+    padding-left: 56px;
+    font-size: 30px;
+    font-family: "Kalam", cursive;
+    color: white;
+}
+
+#fundo_coleta_seletiva #fundo_branco_coleta_seletiva #selecao_jogo #selecao{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#fundo_coleta_seletiva #fundo_branco_coleta_seletiva #selecao_jogo #selecao .lixos{
+    width: 230px;
+    height: 100%;
+}
+
+#fundo_coleta_seletiva #fundo_branco_coleta_seletiva #selecao_jogo #selecao .lixos a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+#fundo_coleta_seletiva #fundo_branco_coleta_seletiva #selecao_jogo #selecao .lixos a .lixeiras{
+    width: 100%;
+    height: 100%;
+    margin-top: 11.5px;
+}
+
+#fundo_coleta_seletiva #fundo_branco_coleta_seletiva #selecao_jogo #selecao .lixos a .lixeiras:hover{
+transform: scale(1.1,1.1);
+}
+
+#fundo_coleta_seletiva #fundo_branco_coleta_seletiva #coleta_seletiva{
+    width: 50%;
+    height: 100%;
+    border-radius: 45px;
+    margin-left: 20px;
+}
+#fundo_coleta_seletiva #fundo_branco_coleta_seletiva #coleta_seletiva #titulo{
+    width: 90%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+
+#fundo_coleta_seletiva #fundo_branco_coleta_seletiva #coleta_seletiva #titulo #simboloreciclagem{
+    width: 50px;
+    height: 50px;
+    padding-top: 5px;
+}
+
+#fundo_coleta_seletiva #fundo_branco_coleta_seletiva #coleta_seletiva h1{
+    font-size: 50px;
+    padding-left: 10px;
+}
+
+#fundo_coleta_seletiva #fundo_branco_coleta_seletiva #coleta_seletiva p{
+    margin-top: 20px;
+    width: 90%;
+    font-size: 20px;
+    
+}
+
+#fundo_coleta_seletiva #fundo_branco_coleta_seletiva #coleta_seletiva #videos{
+    margin-top: 110px;
+    display: flex;
+    flex-direction: row;
+}
+
+#fundo_coleta_seletiva #fundo_branco_coleta_seletiva #coleta_seletiva #videos iframe{
+    border: 1px solid black
+}
+
+#fundo_coleta_seletiva #fundo_branco_coleta_seletiva #coleta_seletiva #divisao_video{
+    margin-left: 50px;
+}
+
+#fundo_destino_materiais{
+    position: relative;
+    width: 100%;
+    height: 650px;
+    margin-top: 100px;
+    padding-top: 30px;
+    background-color: rgb(254, 254, 255);
+    color: white;
+}
+
+#fundo_destino_materiais #fundo_destino_dentro{
+    width: 80%;
+    height: 550px;
+    margin-top: 30px;
+    margin-left:100px;
+    background-color: #135F3F;
+    border-radius: 45px;
+    display: flex;
+    flex-direction: row;
+
+}
+
+#fundo_destino_materiais #fundo_destino_dentro #destino{
+    width: 100%;
+    height: 100%;
+
+}
+
+#fundo_destino_materiais #fundo_destino_dentro #destino #titulo{
+    display: flex;
+    flex-direction: row;
+
+}
+
+#fundo_destino_materiais #fundo_destino_dentro #destino #titulo #simboloreciclagempreto{
+    margin-top: 30px;
+}
+
+#fundo_destino_materiais #fundo_destino_dentro #destino #titulo h1{
+    margin-top: 35px;
+}
+
+#fundo_destino_materiais #fundo_destino_dentro #destino p{
+    width: 50%;
+    margin-left: 25px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+#fundo_destino_materiais #fundo_destino_dentro #destino iframe{
+    margin-left: 25px;
+    margin-top: 100px;
+    border: 1px black solid
+}
+
+#imagem{
+    position: absolute;
+    width: 1000px;
+    height: 800px;
+    top: 640px;
+    left: 850px;
+
+}
+
+#impactos{
+    width: 90%;
+    height: 500px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+#impactos #titulo{
+    padding-left: 33%;
+    display: flex;
+    flex-direction: row;
+}
+
+#impactos #titulo h1{
+    margin-top: 2px;
+    padding-left: 10px;
+}
+
+#impactos #estatisticas{
+    width: 100%;
+    height: 250px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#impactos #estatisticas .caixas{
+    width: 25%;
+    height: 120px;
+    border: 1px black solid;
+    border-radius: 45px;
+    background-color: #135F3F;
+}
+
+#impactos #estatisticas .caixas a{
+    color: white;
+}
+
+#impactos #estatisticas .caixas a p{
+    width: 80%;
+    padding-top: 20px;
+    padding-left: 50px;
+    font-size: 20px;
+    color: white;
+}
+
+#impactos #estatisticas2{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+#impactos #estatisticas2 .caixas{
+    width: 25%;
+    height: 120px;
+    border: 1px black solid;
+    border-radius: 45px;
+    background-color: #135F3F;
+}
+
+#impactos #estatisticas2 .caixas a{
+    color: white;
+}
+
+#impactos #estatisticas2 .caixas a h1{
+    text-align: center;
+}
+
+#impactos #estatisticas2 .caixas a p{
+    width: 80%;
+    padding-top: 20px;
+    padding-left: 50px;
+    font-size: 20px;
+    color: white;
+}
+
+
+#panorama{
+    width: 100%;
+    height: 350px;
+    background-color: #135F3F;
+}
+
+#panorama #titulo{
+    padding-top: 10px;
+    padding-left: 33%;
+    display: flex;
+    flex-direction: row;
+}
+
+#panorama #titulo h1{
+    margin-top: 4px;
+    color: white;
+}
+
+#panorama #estatistica3 {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#panorama #estatistica3 .caixas{
+    width: 30%;
+    height: 200px;
+    border: 1px black solid;
+    border-radius: 45px;
+    background-color: white;
+}
+
+#panorama #estatistica3 .caixas a{
+    color: black;
+}
+
+#panorama #estatistica3 .caixas a h1{
+    text-align: center;
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+
+#panorama #estatistica3 .caixas a p{
+    font-size: 20px;
+    color: black;
+    text-align: center;
+}

@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#fundo{
+    width: 100%;
+    background-image: url(../imagens/arvore\ \(2\).png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+#caixatexto{
+    width: 100%;
+    height: 500px;
+    margin-bottom: 227px;
+    display: flex;
+    flex-direction: row;
+}
+
+
+#caixatexto #divplaca{
+    width: 800px;
+    height: 600px;
+    margin-left: 9%;
+    position: relative;
+}
+
+#caixatexto #outrojogo{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin-left: 200px;
+    
+    
+}
+
+#caixatexto #outrojogo #placa{
+    width: 200px;
+    height: 200px;
+}
+
+#caixatexto #outrojogo #iroutrojogo{
+    position: absolute;
+    top: 120px;
+    left: 37px;
+    font-family: "Kalam", cursive;
+    text-decoration: none;
+    
+    
+}
+
+#caixatexto #outrojogo #iroutrojogo a{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    
+}
+
+#caixatexto #voltar{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin-left: 150px;
+}
+
+#caixatexto #voltar #placavoltar{
+    position: absolute;
+    top: 120px;
+    left: 60px;
+    font-family: "Kalam", cursive;
+    text-decoration: none;
+}
+
+#caixatexto #voltar #placavoltar a{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+}
+
+#caixatexto #voltar #placa{
+     width: 200px;
+    height: 200px;
+}
+
+#caixatexto #divplaca #placa{
+    width: 100%;
+    height: 100%;
+}
+
+#caixatexto #divplaca  #titulo{
+    position: absolute;
+    top: 350px;
+    left: 180px;
+    font-size: 30px;
+    font-family: "Kalam", cursive;
+    color: white;
+    list-style: none;
+}
+
+#caixatexto #divplaca  #texto{
+    position: absolute;
+    width: 73%;
+    top: 290px;
+    left: 105px;
+    font-size: 25px;
+    font-family: "Kalam", cursive;
+    color: white;
+}
+
+ #lixos{
+    position: relative;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    z-index: 2;
+    
+}
+
+ #lixos #lixo1{
+    width: 200px;
+    height: 200px;
+}
+
+ #lixos #lixo2{
+    width: 200px;
+    height: 200px;
+}
+
+ #lixos #lixo3{
+    width: 200px;
+    height: 200px;
+}
+
+#lixos #lixo4{
+    width: 200px;
+    height: 200px;
+}
+
+ #lixos #lixo5{
+    width: 200px;
+    height: 200px;
+}
+
+#lixos #lixo6{
+    width: 200px;
+    height: 200px;
+    
+}
+
+#lixos .imagensitem{
+    width: 200px;
+    height: 200px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+}
+
+#lixos .imagensitem:hover{
+    transform: scale(1.2,1.2);
+}
+
+
+#tabua{
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    top: 753px;
+    left: 0px;
+    z-index: 1;
+} 
+
