@@ -654,6 +654,36 @@ body::before {
     backdrop-filter: blur(5px);
 }
 
+/* campo de upload de foto no form */
+.file-upload-container {
+    width: 100%;
+}
+
+.custom-file-upload {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 14px;
+    background-color: #e5e5e5;
+    color: #333;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 2px dashed #888;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+
+.custom-file-upload:hover {
+    border-color: #4aff22;
+    background-color: #d5d5d5;
+}
+
+.custom-file-upload svg {
+    color: #1a5c38;
+}
+
 .register-card h2 {
     color: #ffffff;
     font-size: 1.8rem;
