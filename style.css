@@ -510,6 +510,116 @@ body::before {
         align-items: center;
     }
 }
+/* modal pop-up */
+.modal-overlay {
+    display: none; position: fixed; top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background-color: rgba(0,0,0,0.75); z-index: 9999;
+    justify-content: center; align-items: center;
+}
+
+.modal-content {
+    background-color: #f5f5f5; width: 90%; max-width: 850px;
+    border-radius: 16px; padding: 30px; position: relative;
+    max-height: 90vh; overflow-y: auto;
+}
+
+.close-modal {
+    position: absolute; top: 15px; right: 20px;
+    font-size: 2rem; background: none; border: none; cursor: pointer;
+}
+
+.modal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+.modal-main-img { width: 100%; height: 250px; object-fit: cover; border-radius: 8px; }
+.modal-thumbnails { display: flex; gap: 10px; margin-bottom: 20px; }
+.modal-thumbnails img { width: 60px; height: 60px; object-fit: cover; cursor: pointer; border-radius: 6px; border: 2px solid transparent; }
+.modal-thumbnails img:hover { border-color: #1a5c38; }
+.modal-seller { display: flex; gap: 12px; padding: 12px; background: #e0e0e0; border-radius: 8px; }
+
+.modal-title { font-size: 1.5rem; margin-bottom: 10px; color: #111; }
+.modal-tags { display: flex; gap: 15px; color: #555; font-size: 0.9rem; margin-bottom: 15px; }
+.modal-price { font-size: 1.6rem; font-weight: 700; color: #1a5c38; margin-bottom: 25px; }
+.modal-price span { font-size: 1rem; color: #666; font-weight: 400; }
+
+.modal-section { margin-bottom: 20px; }
+.modal-section strong { display: block; font-size: 0.85rem; color: #444; margin-bottom: 8px; text-transform: uppercase; }
+.payment-icons { display: flex; gap: 10px; flex-wrap: wrap; font-size: 0.85rem; color: #222; }
+.payment-icons span { background-color: #e0e0e0; padding: 6px 10px; border-radius: 4px; }
+
+.modal-input { width: 100%; padding: 12px; border: 1px solid #ccc; margin-bottom: 10px; border-radius: 6px; outline: none; }
+.modal-input:focus { border-color: #1a5c38; }
+.btn-buy-modal { width: 100%; padding: 15px; background: #1a5c38; color: #fff; border: none; border-radius: 8px; cursor: pointer; font-size: 1.1rem; font-weight: bold; }
+.btn-buy-modal:hover { background-color: #114515; }
+
+@media (max-width: 768px) {
+    .modal-grid { grid-template-columns: 1fr; }
+}
+
+/* seletor de quantidade */
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    max-width: 125px;
+    background-color: #e0e0e0;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+}
+
+.quantity-selector button {
+    background-color: #1a5c38;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.2s;
+}
+
+.quantity-selector button:hover {
+    background-color: #114515;
+}
+
+.quantity-selector input {
+    width: 50px;
+    text-align: center;
+    border: none;
+    background: transparent;
+    font-size: 1rem;
+    font-weight: bold;
+    outline: none;
+    color: #222;
+}
+
+/* remove as setinhas do input number padrao */
+.quantity-selector input::-webkit-outer-spin-button,
+.quantity-selector input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* opcoes de pagamento clicaveis */
+.payment-option {
+    background-color: #e0e0e0;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.2s;
+    user-select: none;
+    font-size: 0.85rem;
+    color: #222;
+}
+
+.payment-option:hover {
+    border-color: #1a5c38;
+}
+
+.payment-option.active {
+    background-color: #1a5c38;
+    color: #fff;
+    border-color: #4aff22;
+}
 
 /* =========================================
    PÁGINA DE LOGIN
@@ -652,6 +762,36 @@ body::before {
     align-items: center;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(5px);
+}
+
+/* campo de upload de foto no form */
+.file-upload-container {
+    width: 100%;
+}
+
+.custom-file-upload {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 14px;
+    background-color: #e5e5e5;
+    color: #333;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 2px dashed #888;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+
+.custom-file-upload:hover {
+    border-color: #4aff22;
+    background-color: #d5d5d5;
+}
+
+.custom-file-upload svg {
+    color: #1a5c38;
 }
 
 .register-card h2 {
