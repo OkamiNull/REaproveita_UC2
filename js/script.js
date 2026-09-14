@@ -210,7 +210,7 @@ lixeirareciclavel.forEach((lixeirareciclavels) =>{
     lixeirareciclavels.addEventListener("dragover",  function(event) { 
     event.preventDefault();
     
-
+    
 });
 
 lixeirareciclavels.addEventListener("drop", desaparecer);
@@ -218,3 +218,4 @@ lixeirareciclavels.addEventListener("drop", desaparecer);
 });
 
 resetarlixo.addEventListener("click", resetar);
+
