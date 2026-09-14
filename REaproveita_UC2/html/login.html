@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - UC2 REaproveita!</title>
     <link rel="stylesheet" href="../style.css">
+    <script src="../../js/script.js"></script>
 </head>
 <body>
 
@@ -16,7 +17,7 @@
 
         <nav class="nav-links">
             <a href="../index.html">Home</a>
-            <a href="#">Catalogo</a>
+            <a href="../html/catalogo.html">Catalogo</a>
             <a href="#">Como funciona</a>
             <a href="#">Sobre</a>
             <a href="#">Contato</a>
@@ -29,7 +30,7 @@
             </div>
             
             <a href="../html/login.html" target="_blank" aria-label="Ir para a página de login">
-                <img src="../imagens/iconeTeste.jpg" alt="Foto de Perfil" class="profile-pic">
+                <img src="../imagens/iconeTeste.jpg" alt="Foto de Perfil" class="profile-pic" id="profilePic">
             </a>
         </div>
     </header>
@@ -45,9 +46,9 @@
             <h2>Consumidor</h2>
             
             <!-- Formulário de Login -->
-            <form class="login-form">
-                <input type="email" placeholder="Seu E-mail" required>
-                <input type="password" placeholder="Sua Senha" required>
+            <form class="login-form" id="formLoginUsuario">
+                <input id="emailUsuario" type="email" placeholder="Seu E-mail" required>
+                <input id="senhaUsuario" type="password" placeholder="Sua Senha" required>
                 <button type="submit" class="btn-login">Entrar</button>
             </form>
             
@@ -67,9 +68,9 @@
             <h2>Empresa</h2>
             
             <!-- Formulário de Login -->
-            <form class="login-form">
-                <input type="email" placeholder="E-mail Corporativo" required>
-                <input type="password" placeholder="Senha" required>
+            <form class="login-form" id="formLoginEmpresa">
+                <input id="emailEmpresa" type="email" placeholder="E-mail Corporativo" required>
+                <input id="senhaEmpresa" type="password" placeholder="Senha" required>
                 <button type="submit" class="btn-login">Entrar</button>
             </form>
             

@@ -50,62 +50,406 @@ function scrollCarousel(carouselId, amount) {
 
 
 
-//lixeira funcional
 
-const lixos = document.querySelectorAll("[draggable='true']");
-const lixeirareciclavel = document.querySelectorAll(".lixeirareciclavel");
-const resetarlixo = document.querySelector("#resetarlixos");
-const mudarlixo = document.querySelectorAll(".lixeirasespecifica")
 
-function arrastarlixo(){
-    console.log("Começou a arrastar");
-    
-    this.classList.add("arrastando");
+// ======================================================
+// BANCO DE DADOS LOCAL
+// ======================================================
 
+function getUsuarios() {
+    return JSON.parse(localStorage.getItem("usuarios")) || [];
 }
 
-function desaparecer(){
-
-    const elementoarrastado = document.querySelector(".arrastando")
-    
-    if(elementoarrastado.id === "lixo1" && this.id === "lixeira1") {
-        elementoarrastado.style.display = "none";
-    } else if (elementoarrastado.id === "lixo4" && this.id === "lixeira2") {     
-        elementoarrastado.style.display = "none";
-    } else if (elementoarrastado.id === "lixo3" && this.id === "lixeira3") {
-        elementoarrastado.style.display = "none"
-    } else if (elementoarrastado.id === "lixo2" && this.id === "lixeira4") {
-        elementoarrastado.style.display = "none"
-    } else if (elementoarrastado.id === "lixo5" && this.id === "lixeira5") {
-        elementoarrastado.style.display = "none"
-
-
-    } else {alert("Você errou a lixeira!");
-    }   
-
-    elementoarrastado.classList.remove("arrastando");
-    
+function getEmpresas() {
+    return JSON.parse(localStorage.getItem("empresas")) || [];
 }
 
-function resetar(){
-    lixos.forEach(function(lixos){
-        lixos.style.display = "block";
+function salvarUsuarios(usuarios) {
+    localStorage.setItem("usuarios", JSON.stringify(usuarios));
+}
+
+function salvarEmpresas(empresas) {
+    localStorage.setItem("empresas", JSON.stringify(empresas));
+}
+
+
+// ======================================================
+// MOSTRAR / ESCONDER SENHA
+// ======================================================
+
+function toggleSenha(id) {
+
+    const campo = document.getElementById(id);
+
+    if (!campo) return;
+
+    if (campo.type === "password") {
+        campo.type = "text";
+    } else {
+        campo.type = "password";
+    }
+}
+
+
+// ======================================================
+// CADASTRO DE USUÁRIO
+// ======================================================
+
+function cadastrarUsuario() {
+
+    const nome = document.getElementById("nome").value.trim();
+    const cpf = document.getElementById("cpf").value.trim();
+    const email = document.getElementById("email").value.trim().toLowerCase();
+    const telefone = document.getElementById("telefone").value.trim();
+    const cep = document.getElementById("cep").value.trim();
+    const cidadeEstado = document.getElementById("cidadeEstado").value.trim();
+    const endereco = document.getElementById("endereco").value.trim();
+    const senha = document.getElementById("senha").value;
+    const foto = document.getElementById("foto").value.trim();
+    const confirmaSenha = document.getElementById("confirma-senha").value;
+
+    if (
+        !nome ||
+        !cpf ||
+        !email ||
+        !telefone ||
+        !cep ||
+        !cidadeEstado ||
+        !endereco ||
+        !senha ||
+        !foto ||
+        !confirmaSenha
+    ) {
+        alert("Preencha todos os campos.");
+        return;
+    }
+
+    if (senha !== confirmaSenha) {
+        alert("As senhas não coincidem.");
+        return;
+    }
+
+    const usuarios = getUsuarios();
+    const empresas = getEmpresas();
+
+    const emailExiste =
+        usuarios.some(usuario => usuario.email === email) ||
+        empresas.some(empresa => empresa.email === email);
+
+    if (emailExiste) {
+        alert("Este e-mail já está cadastrado.");
+        return;
+    }
+
+    const cpfExiste = usuarios.some(usuario => usuario.cpf === cpf);
+
+    if (cpfExiste) {
+        alert("Este CPF já está cadastrado.");
+        return;
+    }
+
+    const novoUsuario = {
+        id: Date.now(),
+        tipo: "usuario",
+        nome,
+        cpf,
+        email,
+        telefone,
+        cep,
+        cidadeEstado,
+        endereco,
+        senha,
+        foto
+    };
+
+    usuarios.push(novoUsuario);
+
+    salvarUsuarios(usuarios);
+
+    alert("Cadastro realizado com sucesso!");
+
+    window.location.href = "login.html";
+}
+
+
+// ======================================================
+// CADASTRO DE EMPRESA
+// ======================================================
+
+function cadastrarEmpresa() {
+
+    const razaoSocial = document.getElementById("razaoSocial").value.trim();
+    const cnpj = document.getElementById("cnpj").value.trim();
+    const responsavel = document.getElementById("responsavel").value.trim();
+    const email = document.getElementById("email").value.trim().toLowerCase();
+    const telefone = document.getElementById("telefone").value.trim();
+    const cep = document.getElementById("cep").value.trim();
+    const cidadeEstado = document.getElementById("cidadeEstado").value.trim();
+    const endereco = document.getElementById("endereco").value.trim();
+    const senha = document.getElementById("senha").value;
+    const foto = document.getElementById("foto").value.trim();
+    const confirmaSenha = document.getElementById("confirma-senha").value;
+
+    if (
+        !razaoSocial ||
+        !cnpj ||
+        !responsavel ||
+        !email ||
+        !telefone ||
+        !cep ||
+        !cidadeEstado ||
+        !endereco ||
+        !senha ||
+        !foto ||
+        !confirmaSenha
+    ) {
+        alert("Preencha todos os campos.");
+        return;
+    }
+
+    if (senha !== confirmaSenha) {
+        alert("As senhas não coincidem.");
+        return;
+    }
+
+    const usuarios = getUsuarios();
+    const empresas = getEmpresas();
+
+    const emailExiste =
+        usuarios.some(usuario => usuario.email === email) ||
+        empresas.some(empresa => empresa.email === email);
+
+    if (emailExiste) {
+        alert("Este e-mail já está cadastrado.");
+        return;
+    }
+
+    const cnpjExiste = empresas.some(empresa => empresa.cnpj === cnpj);
+
+    if (cnpjExiste) {
+        alert("Este CNPJ já está cadastrado.");
+        return;
+    }
+
+    const novaEmpresa = {
+        id: Date.now(),
+        tipo: "empresa",
+        razaoSocial,
+        cnpj,
+        responsavel,
+        email,
+        telefone,
+        cep,
+        cidadeEstado,
+        endereco,
+        senha,
+        foto
+    };
+
+    empresas.push(novaEmpresa);
+
+    salvarEmpresas(empresas);
+
+    alert("Empresa cadastrada com sucesso!");
+
+    window.location.href = "login.html";
+}
+
+
+// ======================================================
+// LOGIN
+// ======================================================
+
+function fazerLogin(email, senha, tipo) {
+
+    email = email.trim().toLowerCase();
+
+    let conta = null;
+
+    if (tipo === "usuario") {
+
+        const usuarios = getUsuarios();
+
+        conta = usuarios.find(usuario =>
+            usuario.email === email &&
+            usuario.senha === senha
+        );
+
+    } else if (tipo === "empresa") {
+
+        const empresas = getEmpresas();
+
+        conta = empresas.find(empresa =>
+            empresa.email === email &&
+            empresa.senha === senha
+        );
+    }
+
+    if (!conta) {
+        return false;
+    }
+
+    localStorage.setItem(
+        "usuarioLogado",
+        JSON.stringify(conta)
+    );
+    
+    return true;
+}
+
+
+// ======================================================
+// INICIALIZAÇÃO
+// ======================================================
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    carregarFotoPerfil();
+
+    // ------------------------------------------
+    // OLHO DA SENHA
+    // ------------------------------------------
+
+    document.querySelectorAll(".eye-icon").forEach(function (icone) {
+
+        const alvo = icone.dataset.target;
+
+        if (!alvo) return;
+
+        icone.addEventListener("click", function () {
+            toggleSenha(alvo);
+        });
+
     });
-}
 
-lixos.forEach((lixosreciclaveis1) =>{
-    lixosreciclaveis1.addEventListener("dragstart", arrastarlixo)
-});
 
-lixeirareciclavel.forEach((lixeirareciclavels) =>{
-    lixeirareciclavels.addEventListener("dragover",  function(event) { 
-    event.preventDefault();
+    // ------------------------------------------
+    // CADASTRO DE USUÁRIO
+    // ------------------------------------------
+
+    const formCadastroUsuario =
+        document.getElementById("formCadastroUsuario");
+
+    if (formCadastroUsuario) {
+
+        formCadastroUsuario.addEventListener("submit", function (event) {
+
+            event.preventDefault();
+
+            cadastrarUsuario();
+
+        });
+    }
+
+
+    // ------------------------------------------
+    // CADASTRO DE EMPRESA
+    // ------------------------------------------
+
+    const formCadastroEmpresa =
+        document.getElementById("formCadastroEmpresa");
+
+    if (formCadastroEmpresa) {
+
+        formCadastroEmpresa.addEventListener("submit", function (event) {
+
+            event.preventDefault();
+
+            cadastrarEmpresa();
+
+        });
+    }
+
+
+    // ------------------------------------------
+    // LOGIN DO USUÁRIO
+    // ------------------------------------------
+
+    const formLoginUsuario =
+        document.getElementById("formLoginUsuario");
+
+    if (formLoginUsuario) {
+
+        formLoginUsuario.addEventListener("submit", function (event) {
+
+            event.preventDefault();
+
+            const email =
+                document.getElementById("emailUsuario").value;
+
+            const senha =
+                document.getElementById("senhaUsuario").value;
+
+            const sucesso =
+                fazerLogin(email, senha, "usuario");
     
 
+            if (sucesso) {
+
+                alert("Sucesso ao logar");
+               
+
+            } else {
+
+                alert("E-mail ou senha incorretos.");
+
+            }
+
+        });
+    }
+
+
+    // ------------------------------------------
+    // LOGIN DA EMPRESA
+    // ------------------------------------------
+
+    const formLoginEmpresa =
+        document.getElementById("formLoginEmpresa");
+
+    if (formLoginEmpresa) {
+
+        formLoginEmpresa.addEventListener("submit", function (event) {
+
+            event.preventDefault();
+
+            const email =
+                document.getElementById("emailEmpresa").value;
+
+            const senha =
+                document.getElementById("senhaEmpresa").value;
+
+            const sucesso =
+                fazerLogin(email, senha, "empresa");
+                
+
+            if (sucesso) {
+
+                alert("Sucesso ao logar");
+                
+
+            } else {
+
+                alert("E-mail ou senha incorretos.");
+
+            }
+
+        });
+    }
+
 });
 
-lixeirareciclavels.addEventListener("drop", desaparecer);
+function carregarFotoPerfil() {
+    const dados = localStorage.getItem("usuarioLogado");
 
-});
+    if (!dados) return;
 
-resetarlixo.addEventListener("click", resetar);
+    const usuario = JSON.parse(dados);
+
+    const profilePic = document.getElementById("profilePic");
+
+    if (!profilePic) return;
+
+    if (usuario.foto) {
+        profilePic.src = usuario.foto;
+    }
+}

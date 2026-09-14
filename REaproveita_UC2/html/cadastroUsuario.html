@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro Empresa - UC2 REaproveita!</title>
+    <title>Cadastro Consumidor - UC2 REaproveita!</title>
     <link rel="stylesheet" href="../style.css">
+    <script src="../../js/script.js"></script>
 </head>
 <body>
 
@@ -29,59 +30,56 @@
             </div>
             
             <a href="../html/login.html" target="_blank" aria-label="Ir para a página de login">
-                <img src="../imagens/iconeTeste.jpg" alt="Foto de Perfil" class="profile-pic">
+                <img src="../imagens/iconeTeste.jpg" alt="Foto de Perfil" class="profile-pic" id="profilePic">
             </a>
         </div>
     </header>
 
     <div class="login-wrapper">
 
-        <!-- card de cadastro da empresa -->
+        <!-- card de cadastro -->
         <div class="register-card">
             
-            <!-- icone de empresa -->
+            <!-- icone -->
             <div class="icon-circle">
                 <svg viewBox="0 0 24 24" width="48" height="48" stroke="#ffffff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
-                    <path d="M9 22v-4h6v4"></path>
-                    <path d="M8 6h.01"></path><path d="M16 6h.01"></path>
-                    <path d="M12 6h.01"></path><path d="M12 10h.01"></path>
-                    <path d="M12 14h.01"></path><path d="M16 10h.01"></path>
-                    <path d="M16 14h.01"></path><path d="M8 10h.01"></path>
-                    <path d="M8 14h.01"></path>
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="8.5" cy="7" r="4"></circle>
+                    <line x1="20" y1="8" x2="20" y2="14"></line>
+                    <line x1="23" y1="11" x2="17" y2="11"></line>
                 </svg>
             </div>
             
-            <h2>Cadastro Corporativo</h2>
+            <h2>Criar Conta</h2>
             
-            <form class="register-form">
+            <form class="register-form" id="formCadastroUsuario">
                 
-                <!-- dados da empresa -->
-                <div class="form-section-title">dados da empresa</div>
+                <!-- dados pessoais -->
+                <div class="form-section-title">dados pessoais</div>
                 <div class="form-grid">
-                    <input type="text" placeholder="Razão Social" required>
-                    <input type="text" id="cnpj" placeholder="CNPJ" maxlength="18" required>
+                    <input id="nome" type="text" placeholder="Nome Completo" required>
+                    <input id="cpf" type="text" placeholder="CPF" maxlength="14" required>
                 </div>
 
-                <!-- responsavel e contato -->
-                <div class="form-section-title">contato responsável</div>
+                <!-- contato -->
+                <div class="form-section-title">contato</div>
                 <div class="form-grid">
-                    <input type="text" placeholder="Nome do Responsável" required>
-                    <input type="email" placeholder="E-mail Corporativo" required>
+                    <input type="email" id="email" placeholder="E-mail" required>
+                    <input type="tel" id="telefone" placeholder="WhatsApp / Telefone" maxlength="15" required>
                 </div>
-                <input type="tel" id="telefone" placeholder="Telefone ou WhatsApp da Empresa" maxlength="15" class="full-width" required>
 
-                <!-- endereco da empresa (logistica) -->
-                <div class="form-section-title">endereço de coleta/entrega</div>
+                <!-- endereco -->
+                <div class="form-section-title">endereço</div>
                 <div class="form-grid">
-                    <input type="text" placeholder="CEP" maxlength="9" required>
-                    <input type="text" placeholder="Cidade - Estado" required>
+                    <input id="cep" type="text" placeholder="CEP" maxlength="9" required>
+                    <input id="cidadeEstado" type="text" placeholder="Cidade - Estado" required>
                 </div>
-                <input type="text" placeholder="Endereço Completo (Rua, Número, Galpão/Bairro)" class="full-width" required>
+                <input id="endereco" type="text" placeholder="Rua, Número e Bairro" class="full-width" required>
 
                 <!-- seguranca -->
                 <div class="form-section-title">segurança</div>
                 <div class="form-grid">
+                    <!-- wrapper da senha para alinhar o olho -->
                     <div class="password-wrapper">
                         <input type="password" id="senha" placeholder="Crie uma Senha" required>
                         <svg class="eye-icon" onclick="toggleSenha('senha')" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -97,22 +95,22 @@
                         </svg>
                     </div>
                 </div>
-                <!-- mensagem da senha -->
+                <!-- mensagem de erro/sucesso da senha -->
                 <span id="msg-senha" class="pass-msg"></span>
 
-                <button type="submit" class="btn-login btn-register">Criar Conta Empresarial</button>
+                <button type="submit" class="btn-login btn-register">Finalizar Cadastro</button>
             </form>
             
             <div class="login-footer">
-                <span>Já é parceiro?</span>
-                <a href="login.html">Fazer Login</a>
+                <span>Já possui uma conta?</span>
+                <a href="login.html">Entrar</a>
             </div>
             
         </div>
 
     </div>
 
-    <footer class="site-footer">
+        <footer class="site-footer">
     
     <div class="footer-benefits">
         
@@ -157,5 +155,6 @@
     </div>
     
 </footer>
+
 </body>
 </html>
