@@ -5,32 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catalogo - REaproveita!</title>
-    <link rel="stylesheet" href="/catalogo.css">
+    <link rel="stylesheet" href="css/catalogo.css">
 </head>
 
 <body>
 
-    <div vw class="enabled">
-  <div vw-access-button class="active"></div>
-  <div vw-plugin-wrapper>
-    <div vw-plugin-top-wrapper></div>
-  </div>
+<div vw class="enabled">
+    <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div vw-plugin-top-wrapper></div>
+        </div>
 </div>
+
+
 <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
 <script>
   new window.VLibras.Widget('https://vlibras.gov.br/app');
 </script>
 
     <header class="header">
         <div class="logo-container">
-            <img src="/imagens/logoTeste.jpg" alt="Logo REaproveita!" class="logo-img">
+            <img src="imagens/logoTeste.jpg" alt="Logo REaproveita!" class="logo-img">
             <h1 class="logo-text">REaproveita!</h1>
         </div>
 
         <nav class="nav-links">
+            <a href="index.html">Home</a>
             <a href="catalogo.html">Catalogo</a>
-            <a href="#">Como funciona</a>
-            <a href="#">Sobre</a>
+            <a href="../curso/Parte2curso/index.html">Como funciona</a>
+            <a href="sobrenos.html">Sobre</a>
             <a href="contato.html">Contato</a>
         </nav>
 
@@ -45,8 +49,8 @@
                 <input type="text" placeholder="Buscar por materiais" class="search-input">
             </div>
 
-            <a href="html/login.html" target="_blank" aria-label="Ir para a página de login">
-                <img src="/imagens/iconeTeste.jpg" alt="Foto de Perfil" class="profile-pic">
+            <a href="login.html" target="_blank" aria-label="Ir para a página de login">
+                <img src="imagens/iconeTeste.jpg" alt="Foto de Perfil" class="profile-pic" id ="profilePic">
             </a>
         </div>
     </header>
@@ -65,10 +69,13 @@
                 </div>
                 <div class="filter-content">
                     <div class="checkbox-list">
-                        <label><input type="checkbox"> Plastico</label>
-                        <label><input type="checkbox"> Algodão</label>
-                        <label><input type="checkbox"> Aluminio</label>
-                        <label><input type="checkbox"> Eletronicos</label>
+                        <label><input type="checkbox">Plástico</label>
+                        <label><input type="checkbox">Papelão</label>
+                        <label><input type="checkbox">Algodão</label>
+                        <label><input type="checkbox">Alumínio</label>
+                        <label><input type="checkbox">Eletrônicos</label>
+                        
+
                     </div>
                 </div>
             </div>
@@ -82,9 +89,10 @@
                 <div class="filter-content">
                     <div class="range-container">
                         <div class="range-label">kg/tons</div>
-                        <input type="range" class="range-slider" min="0" max="1000" value="500">
+                        <input type="range" class="range-slider" min="0" max="1000" value="0">
                         <div class="range-values">
                             <span>0</span>
+                            <span>500</span>
                             <span>1000</span>
                         </div>
                     </div>
@@ -99,7 +107,7 @@
                 </div>
                 <div class="filter-content">
                     <div class="map-preview">
-                        <img src="https://maps.app.goo.gl/SsgLv6s88mxEqJ1V6" alt="Mapa">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5868.246086901839!2d-46.693850878013585!3d-23.527382108051942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef8775663b04f%3A0x923835e9005f8309!2sSenac%20Lapa%20Tito!5e0!3m2!1spt-BR!2sbr!4v1789330172314!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                     </div>
                     <input type="text" class="input-city" placeholder="Cidade">
                 </div>
@@ -112,7 +120,13 @@
                     <span class="arrow">&#9660;</span>
                 </div>
                 <div class="filter-content">
-                    <p style="padding-top: 10px; font-size: 13px;">opções de preço que ainda nao sei como fazer</p>
+                    <div class="checkbox-list-price">
+                        <label><input type="checkbox">R$ 5 - 30 </label>
+                        <label><input type="checkbox">R$ 31 - 60</label>
+                        <label><input type="checkbox">R$ 61 - 90</label>
+                        <label><input type="checkbox">R$ 91 - 120</label>
+                        <label><input type="checkbox">R$ 120+</label>
+                    </div>
                 </div>
             </div>
 
@@ -130,12 +144,21 @@
                 <button id="btnOpenModal" class="btn-create-post">+ Anunciar Novo Material</button>
             </header>
 
+
+            
+            <div id="catalogoProdutosarea">
+                <div id="catalogoProdutos"></div>
+            </div>
+
             <!-- GRID DE CARD DE PRODUTOS -->
             <div class="products-grid">
 
+                
+
+
                 <!-- Card 1 -->
                 <div class="card">
-                    <img class="card-image" src="/imagens/papelao.jpg" alt="Fardos de papelão">
+                    <img class="card-image" src="imagens/papelao.jpg" alt="Fardos de papelão">
                     <div class="card-content">
                         <div class="card-title">Fardos de papelão</div>
                         <div class="card-info">🛍️ 100kg</div>
@@ -149,7 +172,7 @@
                 </div>
 
                 <!-- Demais cards de exemplo -->
-                <div class="card"><img class="card-image" src="/imagens/e097569ced69dd130628dfa6872de2bb.jpg" alt="Fardos de papelão">
+                <div class="card"><img class="card-image" src="imagens/e097569ced69dd130628dfa6872de2bb.jpg" alt="Fardos de papelão">
                     <div class="card-content">
                         <div class="card-title">Tampas de Garrafa</div>
                         <div class="card-info">🛍️ 60kg</div>
@@ -159,7 +182,7 @@
                                 alt="Usuário"><button class="btn-details">Ver detalhes</button></div>
                     </div>
                 </div>
-                <div class="card"><img class="card-image" src="/imagens/8ce8be7522feedf144bef6801ff84100.jpg" alt="Fardos de papelão">
+                <div class="card"><img class="card-image" src="imagens/8ce8be7522feedf144bef6801ff84100.jpg" alt="Fardos de papelão">
                     <div class="card-content">
                         <div class="card-title">Garrafas Pet</div>
                         <div class="card-info">🛍️ 1200kg</div>
@@ -169,7 +192,7 @@
                                 alt="Usuário"><button class="btn-details">Ver detalhes</button></div>
                     </div>
                 </div>
-                <div class="card"><img class="card-image" src="/imagens/9e9ee61df06df048e219933e56cdf6dd.jpg" alt="Fardos de papelão">
+                <div class="card"><img class="card-image" src="imagens/9e9ee61df06df048e219933e56cdf6dd.jpg" alt="Fardos de papelão">
                     <div class="card-content">
                         <div class="card-title">Latinhas</div>
                         <div class="card-info">🛍️ 1500kg</div>
@@ -179,7 +202,7 @@
                                 alt="Usuário"><button class="btn-details">Ver detalhes</button></div>
                     </div>
                 </div>
-                <div class="card"><img class="card-image" src="/imagens/75e516fbb9aa4ba991e108759ccb42f6.jpg" alt="Fardos de papelão">
+                <div class="card"><img class="card-image" src="imagens/75e516fbb9aa4ba991e108759ccb42f6.jpg" alt="Fardos de papelão">
                     <div class="card-content">
                         <div class="card-title">papelão</div>
                         <div class="card-info">🛍️ 2200kg</div>
@@ -189,7 +212,7 @@
                                 alt="Usuário"><button class="btn-details">Ver detalhes</button></div>
                     </div>
                 </div>
-                <div class="card"><img class="card-image" src="/imagens/papelao.jpg" alt="Fardos de papelão">
+                <div class="card"><img class="card-image" src="imagens/papelao.jpg" alt="Fardos de papelão">
                     <div class="card-content">
                         <div class="card-title">Fardos de papelão</div>
                         <div class="card-info">🛍️ 1200kg</div>
@@ -199,7 +222,7 @@
                                 alt="Usuário"><button class="btn-details">Ver detalhes</button></div>
                     </div>
                 </div>
-                <div class="card"><img class="card-image" src="/imagens/75e516fbb9aa4ba991e108759ccb42f6.jpg" alt="Fardos de papelão">
+                <div class="card"><img class="card-image" src="imagens/75e516fbb9aa4ba991e108759ccb42f6.jpg" alt="Fardos de papelão">
                     <div class="card-content">
                         <div class="card-title">pacote de papelão</div>
                         <div class="card-info">🛍️ 3000kg</div>
@@ -209,7 +232,7 @@
                                 alt="Usuário"><button class="btn-details">Ver detalhes</button></div>
                     </div>
                 </div>
-                <div class="card"><img class="card-image" src="/imagens/e097569ced69dd130628dfa6872de2bb.jpg" alt="Fardos de papelão">
+                <div class="card"><img class="card-image" src="imagens/e097569ced69dd130628dfa6872de2bb.jpg" alt="Fardos de papelão">
                     <div class="card-content">
                         <div class="card-title">Tampinhas de Pet</div>
                         <div class="card-info">🛍️ 1200kg</div>
@@ -244,53 +267,69 @@
                 <div id="step-1" class="tab-content active">
                     <div class="form-layout">
                         <div class="form-left">
+
+                            <div class="form-group">
+                                <label>Nome</label>
+                                <input type="text" id="nome" class="form-input" placeholder="Nome do material" required>
+                            </div>
+
                             <div class="form-group">
                                 <label>Tipo de Material</label>
-                                <select class="form-input">
-                                    <option>Papelão Ondulado</option>
+                                <select id="tipoMaterial" class="form-input" required>
+                                    <option>Papelão</option>
                                     <option>Plástico</option>
                                     <option>Alumínio</option>
+                                    <option>Algodão</option>
+                                    <option>Eletrônicos</option>
+                                    <option>Outros</option>
                                 </select>
                             </div>
 
                             <div class="form-group">
                                 <label>Quantidade Estimada</label>
-                                <input type="text" class="form-input" placeholder="1500kg">
+                                <input type="number" id="quantidade" class="form-input" placeholder="0kg" min="1" max="1000" step="1" required>
                             </div>
 
                             <div class="form-group">
                                 <label>Descrição</label>
-                                <textarea class="form-input textarea" placeholder="Fardos prensados, limpos"></textarea>
+                                <textarea id="descricao" class="form-input textarea" placeholder="Fardos prensados, limpos" required></textarea>
                             </div>
 
                             <div class="form-group">
                                 <label>Disponibilidade para Retirada</label>
-                                <input type="text" class="form-input" placeholder="08/09/2026">
+                                <input type="date" id="disponibilidade" class="form-input" placeholder="08/09/2026" required>
                             </div>
 
                             <div class="form-group">
                                 <label>Preço Esperado</label>
-                                <input type="text" class="form-input" placeholder="R$ 0,45/kg">
+                                <input type="number" id="preco" class="form-input" placeholder="R$ 0,45/kg" min="5" step="0.01" required>
                             </div>
-                        </div>
-
-                        
+                            <button type="button" class="btn-next-step" onclick="avancarParaStep2()">
+                                Próximo Passo
+                            </button>
                         </div>
                     </div>
-
-                    <button class="btn-next-step">Próximo Passo</button>
+                    
                 </div>
 
                 <div id="step-2" class="tab-content">
                     <div class="step-placeholder-box">
                         <h3>Gerenciamento de Fotos</h3>
                         <p>Espaço reservado para carregar e organizar fotos do material.</p>
-                        <div class="upload-placeholder large">
+                            <label class="upload-placeholder large" id="areaUpload" for="fotosProduto">
                             <span class="upload-icon">📷</span>
                             <p>Clique ou arraste suas fotos aqui</p>
-                        </div>
+                            </label>
+                            <input
+                            type="file"
+                            id="fotosProduto"
+                            accept="image/*"
+                            multiple
+                            hidden>
                     </div>
-                    <button class="btn-next-step">Próximo Passo</button>
+                    <button type="button" class="btn-next-step-next" onclick="avancarParaStep3()">
+                        Próximo Passo
+                    </button>
                 </div>
 
             
@@ -299,14 +338,16 @@
                         <h3>Localização da Retirada</h3>
                         <div class="form-group">
                             <label>CEP / Endereço</label>
-                            <input type="text" class="form-input" placeholder="Digite o CEP ou Cidade">
+                            <input type="text" id="localizacao" class="form-input" placeholder="Digite o CEP ou Cidade" required>
                         </div>
                         <div class="map-preview" style="height: 180px; margin-top: 15px;">
-                            <img src="https://maps.googleapis.com/maps/api/staticmap?center=-23.528,-46.66&zoom=14&size=500x200&sensor=false&markers=color:red%7C-23.528,-46.66"
+                           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11877.96215900421!2d12.441756965239533!3d41.903812439819646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1325890a57d42d3d%3A0x94f9ab23a7eb0!2s00120%20Vatican%20City%2C%20Vaticano!5e0!3m2!1spt-BR!2sbr!4v1789334707409!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                                 alt="Mapa">
                         </div>
                     </div>
-                    <button class="btn-next-step">Próximo Passo</button>
+                    <button type="button" class="btn-next-step-next" onclick="mostrarPasso(4)">
+                        Próximo Passo
+                    </button>
                 </div>
 
            
@@ -315,8 +356,13 @@
                         <h3>Revisão e Publicação</h3>
                         <p style="margin-top: 10px; color: #555;">Confira os dados do anúncio antes de publicar na
                             plataforma.</p>
+                        <div id="resumoProduto" class="resumo-produto">
+                            <!-- Resumo do produto será exibido aqui -->
+                        </div>
                     </div>
-                    <button class="btn-next-step" style="background-color: #2E7D32;">Finalizar e Publicar</button>
+                    <button type="button" onclick="publicarProduto()" class="btn-next-step-next">
+                        Finalizar e Publicar
+                    </button>
                 </div>
 
             </div>
@@ -324,11 +370,69 @@
         </div>
     </div>
 
+    <div id="modal-detalhes" class="modal-overlay" onclick="fecharModalFora(event)">
+        <div class="modal-content">
+            <button class="close-modal" onclick="fecharModal()">&times;</button>
+            <div class="modal-grid">
+                
+                <div class="modal-left">
+                    <img src="" id="modal-img-principal" class="modal-main-img" alt="Produto">
+                    <div id="modal-thumbnails" class="modal-thumbnails"></div>
+                    <div class="modal-seller">
+                        <img src="" id="modal-seller-pic" class="seller-pic" alt="Vendedor">
+                        <div>
+                            <strong id="modal-seller-name">Nome Vendedor</strong>
+                            <span id="modal-seller-rating">Avaliação</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="modal-right">
+                    <h2 id="modal-title" class="modal-title">Título Produto</h2>
+                    <div class="modal-tags">
+                        <span id="modal-peso">Peso</span>
+                        <span id="modal-local">Local</span>
+                    </div>
+                    <p id="modal-price" class="modal-price">Preço <span>(Preço por kg)</span></p>
+                    
+                    <!-- novo: seletor de quantidade -->
+                    <div class="modal-section">
+                        <strong>quantidade (kg):</strong>
+                        <div class="quantity-selector">
+                            <button type="button" onclick="mudarQtd(-1)">-</button>
+                            <input type="number" id="input-qtd" value="1" min="1" oninput="atualizarTotal()">
+                            <button type="button" onclick="mudarQtd(1)">+</button>
+                        </div>
+                    </div>
 
-    <script src="/catalogo.js"></script>
+                    <!-- novo: metodos de pagamento clicaveis -->
+                    <div class="modal-section">
+                        <strong>métodos de pagamento (clique para escolher):</strong>
+                        <div class="payment-icons">
+                            <span class="payment-option" onclick="selecionarPagamento(this)">cartão em 10x</span>
+                            <span class="payment-option" onclick="selecionarPagamento(this)">boleto</span>
+                            <span class="payment-option" onclick="selecionarPagamento(this)">pix</span>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-section">
+                        <strong>endereço de entrega/coleta:</strong>
+                        <input type="text" placeholder="CEP" class="modal-input" maxlength="9">
+                        <input type="text" placeholder="Rua, Número, Bairro" class="modal-input">
+                    </div>
+                    
+                    <button class="btn-buy-modal">Confirmar Compra</button>
 
-    <div class="icon-recycle">&#9851;</div>
+            </div>
+        </div>
+    </div>
 
+
+    <script src="js/script.js"></script>
+
+    <script src="js/catalogo.js"></script>
+
+   
 </body>
 
 </html>

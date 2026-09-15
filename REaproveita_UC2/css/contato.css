@@ -1,3 +1,7 @@
+body::before {
+   background: white;
+}
+
 .contact {
     padding: 130px 0;
 }
@@ -75,4 +79,6 @@
     font-weight: 300;
     color: #999999;
 }
+
+
 
