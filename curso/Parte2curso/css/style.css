@@ -8,6 +8,361 @@
     font-weight: bold;
 }
 
+/* container do header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a5c38;
+    padding: 10px 40px;
+    color: #ffffff;
+}
+
+/* Logo */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-img {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ffffff;
+    background-color: #ffffff;
+}
+
+.logo-text {
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* Navegação */
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 400;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.nav-links a:hover {
+    opacity: 0.7;
+}
+
+/* Pesquisa e perfil */
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+/* Barra de pesquisa */
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: #e5e5e5;
+    padding: 8px 16px;
+    border-radius: 4px;
+    gap: 8px;
+}
+
+.search-icon {
+    color: #888888;
+}
+
+.search-input {
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 0.9rem;
+    color: #333333;
+    width: 180px;
+}
+
+.search-input::placeholder {
+    color: #888888;
+}
+
+/* Foto de perfil */
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.08);
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 92vh;
+    overflow: hidden;
+}
+
+.cena {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#fundo_sobre{
+    width: 100%;
+    height: 590px;
+    padding-top: 30px;
+    background-color: #135F3F;
+}
+
+#fundo_sobre #fundo_sobre_branco{
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    border-radius: 45px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+#fundo_sobre #fundo_sobre_branco #ajuste_reciclagem{
+    width: 55%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+    
+}
+
+#fundo_sobre #fundo_sobre_branco  #ajuste_reciclagem #Oque_reciclagem{
+    width: 100%;
+    height: 42%;
+    margin: 0 auto;
+  
+    background-color: white;
+    border-radius: 45px;
+
+}
+
+#fundo_sobre #fundo_sobre_branco  #ajuste_reciclagem #Oque_reciclagem #bloco_reciclagem{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    
+
+}
+
+#fundo_sobre #fundo_sobre_branco  #ajuste_reciclagem #Oque_reciclagem #bloco_reciclagem #divisaoreciclagem{
+    width: 75%;
+    padding-top: 20px;
+    padding-left: 20px;
+    
+
+}
+
+#fundo_sobre #fundo_sobre_branco  #ajuste_reciclagem #Oque_reciclagem #bloco_reciclagem #titulo{
+    display: flex;
+    flex-direction: row;
+}
+
+#fundo_sobre #fundo_sobre_branco  #ajuste_reciclagem #Oque_reciclagem #bloco_reciclagem #titulo h1{
+    padding-left: 10px;
+}
+
+#fundo_sobre #fundo_sobre_branco  #ajuste_reciclagem #Oque_reciclagem #bloco_reciclagem p{
+    font-size: 20px;
+}
+
+#fundo_sobre #fundo_sobre_branco  #ajuste_reciclagem #Oque_reciclagem #imagemvaso{
+    width: 23%;
+    height: 245px;
+}
+
+#fundo_sobre #fundo_sobre_branco  #ajuste_reciclagem #Oque_reciclagem #imagemvaso img{
+   width: 150px;
+   height: 100%;
+   padding-left: 100px;
+   padding-top: 5px;
+    
+}
+
+#fundo_sobre #fundo_sobre_branco #ajuste_reciclagem #beneficios{
+    width: 100%;
+    height: 42%;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 45px;
+    
+}
+
+#fundo_sobre #fundo_sobre_branco #ajuste_reciclagem #beneficios #divisao_beneficios{
+    display: flex;
+    flex-direction: row;
+}
+
+#fundo_sobre #fundo_sobre_branco #ajuste_reciclagem #beneficios #divisao_beneficios #texto{
+    width: 75%;
+    height: 226px;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+#fundo_sobre #fundo_sobre_branco #ajuste_reciclagem #beneficios #divisao_beneficios #texto #titulo{
+    display: flex;
+    flex-direction: row;
+}
+
+#fundo_sobre #fundo_sobre_branco #ajuste_reciclagem #beneficios #divisao_beneficios #texto #titulo h1{
+    padding-left: 10px;
+}
+
+#fundo_sobre #fundo_sobre_branco #ajuste_reciclagem #beneficios #divisao_beneficios #texto p{
+    font-size: 20px;
+}
+
+#fundo_sobre #fundo_sobre_branco #ajuste_reciclagem #beneficios #divisao_beneficios #esfera{
+    width: 23%;
+    height: 245px;
+}
+
+#fundo_sobre #fundo_sobre_branco #ajuste_reciclagem #beneficios #divisao_beneficios #esfera img{
+    width: 200px;
+    height: 200px;
+    padding-top: 60px;
+    padding-left: 75px;
+    
+}
+
+#fundo_sobre #fundo_sobre_branco #aprenda{
+    width: 25%;
+    height: 90%;
+    margin: auto 0;
+    padding-bottom: 20px;
+
+    
+}
+
+#fundo_sobre #fundo_sobre_branco #aprenda #aprenda_mais{
+    width: 100%;
+    height: 100%;
+    padding-top:20px;
+    background-color: white;
+    border-radius: 45px;
+    font-size: 20px;
+}
+
+#fundo_sobre #fundo_sobre_branco #aprenda #aprenda_mais h1{
+    text-align: center;
+    font-weight: bold;
+}
+
+#fundo_sobre #fundo_sobre_branco #aprenda #aprenda_mais p{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+#fundo_sobre #fundo_sobre_branco #aprenda #aprenda_mais #titulo_video{
+    margin-top: 110px;
+}
+
+#fundo_sobre #fundo_sobre_branco #aprenda #aprenda_mais iframe{
+    display: block;
+    width: 80%;
+    height: 190px;
+    border-radius: 25px;
+    margin: 0 auto;
+}
+
+#fundo_Tipos{
+    width: 100%;
+    height: 590px;
+    padding-top: 30px;
+    color: white;
+}
+
+#fundo_Tipos #fundo_tipos_verde{
+    width: 90%;
+    height: 550px;
+    background-color: #135F3F;
+    margin: auto;
+    border-radius: 45px;
+    display: flex;
+    flex-direction: row;
+}
+
+#fundo_Tipos #fundo_tipos_verde #tipos{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#fundo_Tipos #fundo_tipos_verde #tipos #ajuste_tipos #titulo{
+    width: 100%;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+}
+
+#fundo_Tipos #fundo_tipos_verde #tipos #ajuste_tipos #titulo h1{
+    margin-top: 5px;
+}
+
+#fundo_Tipos #fundo_tipos_verde #tipos #ajuste_tipos p{
+    width: 95%;
+    font-size: 20px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+#fundo_Tipos #fundo_tipos_verde #tipos #ajuste_tipos #videos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-around;
+}
+
+#fundo_Tipos #fundo_tipos_verde #tipos #ajuste_tipos #videos iframe{
+    width: 45%;
+    margin-top: 100px;
+    height: 200px;
+    border: 1px solid black
+}
+
+
+#fundo_Tipos #fundo_tipos_verde #paraimagens{
+    width: 50%;
+    height: 100%;
+}
+
+#fundo_Tipos #fundo_tipos_verde #paraimagens #alteracaoimagens{
+    width: 70%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+#fundo_Tipos #fundo_tipos_verde #paraimagens #alteracaoimagens #imagensdelixo{
+    width: 500px;
+    height: 580px;
+}
+
+
 #fundo_coleta_seletiva{
     width: 100%;
     height: 590px;
@@ -45,7 +400,7 @@
 #fundo_coleta_seletiva #fundo_branco_coleta_seletiva #selecao_jogo #titulo #placa{
     width: 350px;
     height: 100%;
-    margin-left: 250px;
+    margin: 0 auto;
     background-image: url(../imagens/placa.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -111,7 +466,7 @@ transform: scale(1.1,1.1);
 }
 
 #fundo_coleta_seletiva #fundo_branco_coleta_seletiva #coleta_seletiva h1{
-    font-size: 50px;
+    font-size: 40px;
     padding-left: 10px;
 }
 
@@ -129,6 +484,8 @@ transform: scale(1.1,1.1);
 }
 
 #fundo_coleta_seletiva #fundo_branco_coleta_seletiva #coleta_seletiva #videos iframe{
+    width: 45%;
+    height: 200px;
     border: 1px solid black
 }
 
@@ -140,14 +497,13 @@ transform: scale(1.1,1.1);
     position: relative;
     width: 100%;
     height: 650px;
-    margin-top: 100px;
     padding-top: 30px;
     background-color: rgb(254, 254, 255);
     color: white;
 }
 
 #fundo_destino_materiais #fundo_destino_dentro{
-    width: 80%;
+    width: 90%;
     height: 550px;
     margin-top: 30px;
     margin-left:100px;
@@ -161,8 +517,37 @@ transform: scale(1.1,1.1);
 #fundo_destino_materiais #fundo_destino_dentro #destino{
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: row;
 
 }
+
+#fundo_destino_materiais #fundo_destino_dentro #destino #divisao_destino{
+    width: 50%;
+
+}
+
+#fundo_destino_materiais #fundo_destino_dentro #destino #divisao_video{
+    width: 50%;
+}
+
+
+#fundo_destino_materiais #fundo_destino_dentro #destino #divisao_video .carta {
+    position: relative;
+    width: 100%;
+    height: 57.67vh;
+    overflow: hidden;
+    border-radius: 45px;
+}
+
+#fundo_destino_materiais #fundo_destino_dentro #destino #divisao_video .carta .cenar {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 
 #fundo_destino_materiais #fundo_destino_dentro #destino #titulo{
     display: flex;
@@ -179,157 +564,806 @@ transform: scale(1.1,1.1);
 }
 
 #fundo_destino_materiais #fundo_destino_dentro #destino p{
-    width: 50%;
+    width: 80%;
     margin-left: 25px;
     margin-top: 20px;
     font-size: 20px;
 }
 
 #fundo_destino_materiais #fundo_destino_dentro #destino iframe{
-    margin-left: 25px;
-    margin-top: 100px;
-    border: 1px black solid
-}
-
-#imagem{
-    position: absolute;
-    width: 1000px;
-    height: 800px;
-    top: 640px;
-    left: 850px;
-
-}
-
-#impactos{
-    width: 90%;
-    height: 500px;
-    margin: auto;
-    margin-top: 50px;
-}
-
-#impactos #titulo{
-    padding-left: 33%;
-    display: flex;
-    flex-direction: row;
-}
-
-#impactos #titulo h1{
-    margin-top: 2px;
-    padding-left: 10px;
-}
-
-#impactos #estatisticas{
-    width: 100%;
-    height: 250px;
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-}
-
-#impactos #estatisticas .caixas{
-    width: 25%;
-    height: 120px;
-    border: 1px black solid;
-    border-radius: 45px;
-    background-color: #135F3F;
-}
-
-#impactos #estatisticas .caixas a{
-    color: white;
-}
-
-#impactos #estatisticas .caixas a p{
-    width: 80%;
-    padding-top: 20px;
-    padding-left: 50px;
-    font-size: 20px;
-    color: white;
-}
-
-#impactos #estatisticas2{
-    width: 100%;
-    height: 150px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-
-}
-
-#impactos #estatisticas2 .caixas{
-    width: 25%;
-    height: 120px;
-    border: 1px black solid;
-    border-radius: 45px;
-    background-color: #135F3F;
-}
-
-#impactos #estatisticas2 .caixas a{
-    color: white;
-}
-
-#impactos #estatisticas2 .caixas a h1{
-    text-align: center;
-}
-
-#impactos #estatisticas2 .caixas a p{
-    width: 80%;
-    padding-top: 20px;
-    padding-left: 50px;
-    font-size: 20px;
-    color: white;
-}
-
-
-#panorama{
-    width: 100%;
-    height: 350px;
-    background-color: #135F3F;
-}
-
-#panorama #titulo{
-    padding-top: 10px;
-    padding-left: 33%;
-    display: flex;
-    flex-direction: row;
-}
-
-#panorama #titulo h1{
-    margin-top: 4px;
-    color: white;
-}
-
-#panorama #estatistica3 {
-    margin-top: 30px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-}
-
-#panorama #estatistica3 .caixas{
-    width: 30%;
+    width: 40%;
     height: 200px;
-    border: 1px black solid;
+    margin-left: 25px;
+    margin-top: 60px;
+    border: 1px black solid
+
+}
+
+/* --- rodapé verde --- */
+.footer-benefits {
+    background-color: #388e3c;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 30px 20px;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.benefit-icon {
+    width: 50px;
+    height: auto;
+    object-fit: contain;
+}
+
+.benefit-text {
+    display: flex;
+    flex-direction: column;
+    color: #000000;
+}
+
+.benefit-text strong {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.benefit-text span {
+    font-size: 0.85rem;
+    line-height: 1.3;
+    opacity: 0.8;
+}
+
+/* --- rodapé (Logo e Menu) --- */
+.footer-main {
+    background-color: rgba(17, 17, 17, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    padding: 50px 20px;
+}
+
+.footer-logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ffffff;
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-left: 1px solid #444;
+    padding-left: 40px;
+}
+
+.footer-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.footer-nav a:hover {
+    color: #4aff22;
+}
+
+/* --- Responsividade do Rodapé --- */
+@media (max-width: 768px) {
+    .footer-benefits {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px 40px;
+    }
+
+    .footer-main {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .footer-nav {
+        border-left: none;
+        border-top: 1px solid #444;
+        padding-left: 0;
+        padding-top: 30px;
+        align-items: center;
+    }
+}
+
+@media (max-width: 1366px) {
+
+    .header {
+        padding: 10px 20px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .hero {
+        height: 90vh;
+    }
+
+    #fundo_sobre_branco,
+    #fundo_tipos_verde,
+    #fundo_branco_coleta_seletiva,
+    #fundo_destino_dentro {
+        width: 92% !important;
+    }
+
+    #fundo_destino_dentro {
+        margin-left: auto !important;
+        margin-right: auto;
+    }
+
+    #impactos #titulo,
+    #panorama #titulo {
+        padding-left: 0;
+        justify-content: center;
+    }
+
+    #fundo_destino_materiais #fundo_destino_dentro #destino #divisao_video .carta {
+    position: relative;
+    width: 100%;
+    height: 71.5vh;
+    overflow: hidden;
     border-radius: 45px;
-    background-color: white;
 }
 
-#panorama #estatistica3 .caixas a{
-    color: black;
+#fundo_Tipos #fundo_tipos_verde #tipos #ajuste_tipos #videos iframe{
+    width: 45%;
+    margin-top: 60px;
+    height: 200px;
+    border: 1px solid black
 }
 
-#panorama #estatistica3 .caixas a h1{
-    text-align: center;
-    margin-top: 30px;
-    font-weight: bold;
+#fundo_destino_materiais #fundo_destino_dentro #destino #divisao_video .carta .cenar {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#fundo_sobre #fundo_sobre_branco #aprenda{
+    width: 35%;
+    height: 90%;
+    margin: auto 0;
+    padding-bottom: 20px;
+
+    
+}
+
+#fundo_sobre #fundo_sobre_branco  #ajuste_reciclagem #Oque_reciclagem #imagemvaso img{
+   width: 150px;
+   height: 100%;
+   padding-left: 70px;
+   padding-top: 5px;
+    
+}
+
+#fundo_sobre #fundo_sobre_branco #ajuste_reciclagem #beneficios #divisao_beneficios #esfera img{
+    width: 200px;
+    height: 200px;
+    padding-top: 60px;
+    padding-left: 45px;
+    
+}
+
+/* =========================================================
+   RESPONSIVIDADE PARA CELULAR
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* ================= HEADER ================= */
+
+    .header {
+        flex-direction: row;
+        gap: 20px;
+        padding: 15px 20px;
+        text-align: center;
+    }
+
+    .logo-container {
+        justify-content: center;
+    }
+
+    .logo-img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .logo-text {
+        font-size: 1.3rem;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 0.9rem;
+    }
+
+    .user-actions {
+        width: 100%;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .search-container {
+        width: 70%;
+        padding: 8px 12px;
+    }
+
+    .search-input {
+        width: 100%;
+    }
+
+    .profile-pic {
+        width: 45px;
+        height: 45px;
+    }
+
+
+    /* ================= HERO ================= */
+
+    .hero {
+        height: 45vh;
+    }
+
+    .cena {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+
+    /* =================================================
+       SOBRE / O QUE É RECICLAGEM
+       ================================================= */
+
+    #fundo_sobre {
+        height: auto;
+        padding: 25px 0;
+    }
+
+    #fundo_sobre #fundo_sobre_branco {
+        width: 92%;
+        height: auto;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    #fundo_sobre #fundo_sobre_branco #ajuste_reciclagem {
+        width: 100%;
+        height: auto;
+        gap: 25px;
+    }
+
+    #fundo_sobre #fundo_sobre_branco #ajuste_reciclagem #Oque_reciclagem {
+        width: 100%;
+        height: auto;
+        min-height: 300px;
+        border-radius: 30px;
+    }
+
+    #fundo_sobre #fundo_sobre_branco
+    #ajuste_reciclagem
+    #Oque_reciclagem
+    #bloco_reciclagem {
+        flex-direction: column;
+    }
+
+    #fundo_sobre #fundo_sobre_branco
+    #ajuste_reciclagem
+    #Oque_reciclagem
+    #bloco_reciclagem
+    #divisaoreciclagem {
+        width: 90%;
+        padding: 20px;
+        margin: 0 auto;
+    }
+
+    #fundo_sobre #fundo_sobre_branco
+    #ajuste_reciclagem
+    #Oque_reciclagem
+    #bloco_reciclagem
+    #titulo {
+        justify-content: center;
+        text-align: center;
+    }
+
+    #fundo_sobre #fundo_sobre_branco
+    #ajuste_reciclagem
+    #Oque_reciclagem
+    #bloco_reciclagem
+    #titulo h1 {
+        padding-left: 5px;
+        font-size: 26px;
+    }
+
+    #fundo_sobre #fundo_sobre_branco
+    #ajuste_reciclagem
+    #Oque_reciclagem
+    #bloco_reciclagem p {
+        font-size: 17px;
+        line-height: 1.5;
+        text-align: center;
+    }
+
+    #fundo_sobre #fundo_sobre_branco
+    #ajuste_reciclagem
+    #Oque_reciclagem
+    #imagemvaso {
+        display: none;
+    }
+
+
+    /* ================= BENEFÍCIOS ================= */
+
+    #fundo_sobre #fundo_sobre_branco
+    #ajuste_reciclagem #beneficios {
+        width: 100%;
+        height: auto;
+        min-height: 300px;
+        border-radius: 30px;
+    }
+
+    #fundo_sobre #fundo_sobre_branco
+    #ajuste_reciclagem
+    #beneficios
+    #divisao_beneficios {
+        flex-direction: column;
+    }
+
+    #fundo_sobre #fundo_sobre_branco
+    #ajuste_reciclagem
+    #beneficios
+    #divisao_beneficios
+    #texto {
+        width: auto;
+        height: auto;
+        padding: 20px;
+    }
+
+    #fundo_sobre #fundo_sobre_branco
+    #ajuste_reciclagem
+    #beneficios
+    #divisao_beneficios
+    #texto
+    #titulo {
+        justify-content: center;
+        text-align: center;
+    }
+
+    #fundo_sobre #fundo_sobre_branco
+    #ajuste_reciclagem
+    #beneficios
+    #divisao_beneficios
+    #texto
+    #titulo h1 {
+        padding-left: 5px;
+        font-size: 26px;
+    }
+
+    #fundo_sobre #fundo_sobre_branco
+    #ajuste_reciclagem
+    #beneficios
+    #divisao_beneficios
+    #texto p {
+        font-size: 17px;
+        line-height: 1.5;
+        text-align: center;
+    }
+
+    #fundo_sobre #fundo_sobre_branco
+    #ajuste_reciclagem
+    #beneficios
+    #divisao_beneficios
+    #esfera {
+        display: none;
+    }
+
+
+    /* ================= APRENDA ================= */
+
+    #fundo_sobre #fundo_sobre_branco #aprenda {
+        width: 100%;
+        height: auto;
+        padding-bottom: 0;
+    }
+
+    #fundo_sobre #fundo_sobre_branco
+    #aprenda #aprenda_mais {
+        width: 100%;
+        height: auto;
+        min-height: 400px;
+        padding: 25px 0;
+        border-radius: 30px;
+        font-size: 17px;
+    }
+
+    #fundo_sobre #fundo_sobre_branco
+    #aprenda #aprenda_mais h1 {
+        font-size: 27px;
+    }
+
+    #fundo_sobre #fundo_sobre_branco
+    #aprenda #aprenda_mais p {
+        width: 85%;
+        text-align: center;
+        line-height: 1.5;
+    }
+
+    #fundo_sobre #fundo_sobre_branco
+    #aprenda #aprenda_mais #titulo_video {
+        margin-top: 40px;
+    }
+
+    #fundo_sobre #fundo_sobre_branco
+    #aprenda #aprenda_mais iframe {
+        width: 85%;
+        height: 190px;
+        margin-top: 15px;
+    }
+
+
+    /* =================================================
+       TIPOS DE MATERIAIS
+       ================================================= */
+
+    #fundo_Tipos {
+        height: auto;
+        padding: 25px 0;
+    }
+
+    #fundo_Tipos #fundo_tipos_verde {
+        width: 92%;
+        height: auto;
+        min-height: 700px;
+        flex-direction: column;
+        border-radius: 30px;
+    }
+
+    #fundo_Tipos #fundo_tipos_verde #tipos {
+        width: 100%;
+        height: auto;
+    }
+
+    #fundo_Tipos #fundo_tipos_verde
+    #tipos #ajuste_tipos #titulo {
+        justify-content: center;
+        text-align: center;
+        margin-top: 25px;
+    }
+
+    #fundo_Tipos #fundo_tipos_verde
+    #tipos #ajuste_tipos #titulo h1 {
+        font-size: 27px;
+    }
+
+    #fundo_Tipos #fundo_tipos_verde
+    #tipos #ajuste_tipos p {
+        width: 85%;
+        font-size: 17px;
+        line-height: 1.5;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    #fundo_Tipos #fundo_tipos_verde
+    #tipos #ajuste_tipos #videos {
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    #fundo_Tipos #fundo_tipos_verde
+    #tipos #ajuste_tipos #videos iframe {
+        width: 85%;
+        height: 190px;
+        margin-top: 0;
+    }
+
+    #fundo_Tipos #fundo_tipos_verde #paraimagens {
+        display: none;
+    }
+
+
+    /* =================================================
+       COLETA SELETIVA
+       ================================================= */
+
+    #fundo_coleta_seletiva {
+        height: auto;
+        padding: 25px 0;
+    }
+
+    #fundo_coleta_seletiva
+    #fundo_branco_coleta_seletiva {
+        width: 92%;
+        height: auto;
+        min-height: 900px;
+        flex-direction: column;
+        border-radius: 30px;
+    }
+
+    #fundo_coleta_seletiva
+    #fundo_branco_coleta_seletiva
+    #selecao_jogo {
+        width: 100%;
+        height: 500px;
+        border-radius: 30px;
+    }
+
+    #fundo_coleta_seletiva
+    #fundo_branco_coleta_seletiva
+    #selecao_jogo #titulo {
+        height: 180px;
+    }
+
+    #fundo_coleta_seletiva
+    #fundo_branco_coleta_seletiva
+    #selecao_jogo
+    #titulo #placa {
+        width: 280px;
+    }
+
+    #fundo_coleta_seletiva
+    #fundo_branco_coleta_seletiva
+    #selecao_jogo
+    #titulo #placa p {
+        padding-top: 82px;
+        padding-left: 42px;
+        font-size: 24px;
+    }
+
+    #fundo_coleta_seletiva
+    #fundo_branco_coleta_seletiva
+    #selecao_jogo #selecao {
+        height: 300px;
+        flex-direction: row;
+        align-items: center;
+        
+    }
+
+    #fundo_coleta_seletiva
+    #fundo_branco_coleta_seletiva
+    #selecao_jogo
+    #selecao .lixos {
+        width: 150px;
+        height: 140px;
+    }
+
+    #fundo_coleta_seletiva
+    #fundo_branco_coleta_seletiva
+    #selecao_jogo
+    #selecao .lixos a .lixeiras {
+        margin-top: 0;
+    }
+
+
+    /* ================= TEXTO COLETA ================= */
+
+    #fundo_coleta_seletiva
+    #fundo_branco_coleta_seletiva
+    #coleta_seletiva {
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+        padding-bottom: 30px;
+    }
+
+    #fundo_coleta_seletiva
+    #fundo_branco_coleta_seletiva
+    #coleta_seletiva #titulo {
+        width: 90%;
+        margin: 25px auto 0;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+    #fundo_coleta_seletiva
+    #fundo_branco_coleta_seletiva
+    #coleta_seletiva
+    #titulo #simboloreciclagem {
+        width: 40px;
+        height: 40px;
+    }
+
+    #fundo_coleta_seletiva
+    #fundo_branco_coleta_seletiva
+    #coleta_seletiva h1 {
+        font-size: 27px;
+        padding-left: 5px;
+    }
+
+    #fundo_coleta_seletiva
+    #fundo_branco_coleta_seletiva
+    #coleta_seletiva p {
+        width: 85%;
+        margin: 20px auto 0;
+        font-size: 17px;
+        line-height: 1.5;
+        text-align: center;
+    }
+
+    #fundo_coleta_seletiva
+    #fundo_branco_coleta_seletiva
+    #coleta_seletiva #videos {
+        margin-top: 30px;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    #fundo_coleta_seletiva
+    #fundo_branco_coleta_seletiva
+    #coleta_seletiva #videos iframe {
+        width: 85%;
+        height: 190px;
+    }
+
+    #fundo_coleta_seletiva
+    #fundo_branco_coleta_seletiva
+    #coleta_seletiva #divisao_video {
+        margin-left: 0;
+    }
+
+
+    /* =================================================
+       DESTINO DOS MATERIAIS
+       ================================================= */
+
+    #fundo_destino_materiais {
+        height: auto;
+        padding: 25px 0;
+    }
+
+    #fundo_destino_materiais
+    #fundo_destino_dentro {
+        width: 92%;
+        height: auto;
+        min-height: 750px;
+        margin: 0 auto;
+        border-radius: 30px;
+    }
+
+    #fundo_destino_materiais
+    #fundo_destino_dentro
+    #destino {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+    }
+
+    #fundo_destino_materiais
+    #fundo_destino_dentro
+    #destino
+    #divisao_destino {
+        width: 100%;
+        height: auto;
+        padding-bottom: 30px;
+    }
+
+    #fundo_destino_materiais
+    #fundo_destino_dentro
+    #destino
+    #divisao_video {
+        width: 100%;
+        height: 350px;
+    }
+
+    #fundo_destino_materiais
+    #fundo_destino_dentro
+    #destino #titulo {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #fundo_destino_materiais
+    #fundo_destino_dentro
+    #destino
+    #titulo #simboloreciclagem {
+        margin-top: 25px;
+    }
+
+    #fundo_destino_materiais
+    #fundo_destino_dentro
+    #destino
+    #titulo h1 {
+        margin-top: 30px;
+        font-size: 27px;
+    }
+
+    #fundo_destino_materiais
+    #fundo_destino_dentro
+    #destino p {
+        width: 85%;
+        margin: 20px auto;
+        font-size: 17px;
+        line-height: 1.5;
+        text-align: center;
+    }
+
+    #fundo_destino_materiais
+    #fundo_destino_dentro
+    #destino iframe {
+        width: 80%;
+        height: 190px;
+        display: block;
+        margin: 30px auto 0;
+    }
+
+    #fundo_destino_materiais
+    #fundo_destino_dentro
+    #destino
+    #divisao_video .carta {
+        width: 100%;
+        height: 350px;
+        border-radius: 30px;
+    }
+
+
+    /* =================================================
+       FOOTER
+       ================================================= */
+
+    .footer-benefits {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 25px;
+        padding: 30px 20px;
+    }
+
+    .benefit-item {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .benefit-text {
+        align-items: center;
+    }
+
+    .footer-main {
+        flex-direction: column;
+        gap: 30px;
+        padding: 40px 20px;
+    }
+
+    .footer-logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .footer-nav {
+        border-left: none;
+        border-top: 1px solid #444;
+        padding-left: 0;
+        padding-top: 25px;
+        align-items: center;
+    }
 }
 
 
-#panorama #estatistica3 .caixas a p{
-    font-size: 20px;
-    color: black;
-    text-align: center;
+
 }
