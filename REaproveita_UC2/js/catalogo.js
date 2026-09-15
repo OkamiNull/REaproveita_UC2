@@ -212,7 +212,7 @@ function publicarProduto() {
         localizacao:
             document.getElementById("localizacao").value,
 
-        foto: fotosSelecionadas.length > 0 ? fotosSelecionadas[0] : "../imagens/papelao.jpg"
+        foto: fotosSelecionadas.length > 0 ? fotosSelecionadas[0] : "imagens/papelao.jpg"
     };
 
     produtos.unshift(novoProduto);
