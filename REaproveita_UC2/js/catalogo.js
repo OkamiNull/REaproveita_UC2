@@ -384,7 +384,7 @@ function abrirModal(idProduto, event) {
 
 
     const vendedor = getContaPorId(produto.vendedorId);
-    const nomeVendedor = vendedor ? (vendedor.nome || vendedor.razaoSocial) : `Vendedor #${produto.vendedorId}`;
+    const nomeVendedor = vendedor ? (vendedor.nome || vendedor.razaoSocial) :`Vendedor #${produto.vendedorId}`;
     const fotoVendedor = (vendedor && vendedor.foto) ? vendedor.foto : "https://i.pravatar.cc/100?img=12";
 
     produtoAtual = {
@@ -394,7 +394,7 @@ function abrirModal(idProduto, event) {
         local: `📍 ${produto.localizacao}`,
         precoTexto: `R$ ${Number(produto.preco).toFixed(2).replace('.', ',')}/kg`,
         precoNum: Number(produto.preco),
-        vendedor: `Vendedor #${produto.vendedorId}`,
+        vendedor: nomeVendedor,
         avaliacao: " Sem avaliações ainda",
         fotoVendedor: fotoVendedor,
         imgPrincipal: produto.foto,

@@ -4,22 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UC2 REaproveita!</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+        
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div vw-plugin-top-wrapper></div>
+            </div>
+    </div>
+
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
+    <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
     <header class="header">
         <div class="logo-container">
-            <img src="../imagens/logoTeste.jpg" alt="Logo REaproveita!" class="logo-img">
+            <img src="imagens/logoTeste.jpg" alt="Logo REaproveita!" class="logo-img">
             <h1 class="logo-text">REaproveita!</h1>
         </div>
 
         <nav class="nav-links">
             <a href="index.html">Home</a>
-            <a href="../../../REaproveita_UC2/html/catalogo.html">Catalogo</a>
-            <a href="#">Como funciona</a>
-            <a href="#">Sobre</a>
-            <a href="#">Contato</a>
+            <a href="catalogo.html">Catalogo</a>
+            <a href="como-funciona.html">Como funciona</a>
+            <a href="sobrenos.html">Sobre</a>
+            <a href="contato.html">Contato</a>
         </nav>
 
         <div class="user-actions">
@@ -29,7 +44,7 @@
             </div>
             
             <a href="login.html" target="_blank" aria-label="Ir para a página de login">
-                <img src="../imagens/iconeTeste.jpg" alt="Foto de Perfil" class="profile-pic" id="profilePic">
+                <img src="imagens/iconeTeste.jpg" alt="Foto de Perfil" class="profile-pic" id="profilePic">
             </a>
         </div>
     </header>
@@ -44,16 +59,16 @@
                 </div>
 
                 <div class="hero-actions">
-                    <a href="#" class="action-btn btn-announce">
-                        <img src="../imagens/megafone.png" alt="Ícone de Megafone" class="btn-icon">
+                    <a href="catalogo.html" class="action-btn btn-announce">
+                        <img src="imagens/megafone.png" alt="Ícone de Megafone" class="btn-icon">
                         <div class="btn-text">
                             <strong>Anunciar Resíduos!</strong>
                             <span>Anunciar seu materiais</span>
                         </div>
                     </a>
 
-                    <a href="#" class="action-btn btn-buy">
-                        <img src="../imagens/cestinha.png" alt="Ícone de Cesta" class="btn-icon">
+                    <a href="catalogo.html" class="action-btn btn-buy">
+                        <img src="imagens/cestinha.png" alt="Ícone de Cesta" class="btn-icon">
                         <div class="btn-text">
                             <strong>Comprar Materiais</strong>
                             <span>comprar materiais</span>
@@ -517,6 +532,6 @@
     
 </footer>
 
-    <script src="../../js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

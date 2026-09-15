@@ -20,7 +20,7 @@ body::before {
     width: 100vw;
     height: 100vh;
     z-index: -1;
-    background-image: url('imagens/Background.png'); 
+    background-image: url('../imagens/Background.png'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -138,7 +138,7 @@ body::before {
     width: 100%;
     max-width: 1100px;
     background-image: linear-gradient(rgba(255, 255, 255, 0.4),
-    rgba(255, 255, 255, 0.4)), url('imagens/garrafaPetBack.jpeg');
+    rgba(255, 255, 255, 0.4)), url('../imagens/garrafaPetBack.jpeg');
     background-size: cover;
     background-position: center;
     border-radius: 16px;
