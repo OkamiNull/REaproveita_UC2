@@ -45,7 +45,7 @@
 #fundo_coleta_seletiva #fundo_branco_coleta_seletiva #selecao_jogo #titulo #placa{
     width: 350px;
     height: 100%;
-    margin-left: 250px;
+    margin: 0 auto;
     background-image: url(../imagens/placa.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -111,7 +111,7 @@ transform: scale(1.1,1.1);
 }
 
 #fundo_coleta_seletiva #fundo_branco_coleta_seletiva #coleta_seletiva h1{
-    font-size: 50px;
+    font-size: 40px;
     padding-left: 10px;
 }
 
@@ -129,6 +129,8 @@ transform: scale(1.1,1.1);
 }
 
 #fundo_coleta_seletiva #fundo_branco_coleta_seletiva #coleta_seletiva #videos iframe{
+    width: 45%;
+    height: 200px;
     border: 1px solid black
 }
 
@@ -186,17 +188,20 @@ transform: scale(1.1,1.1);
 }
 
 #fundo_destino_materiais #fundo_destino_dentro #destino iframe{
+    width: 22%;
+    height: 200px;
     margin-left: 25px;
     margin-top: 100px;
     border: 1px black solid
+
 }
 
 #imagem{
     position: absolute;
-    width: 1000px;
-    height: 800px;
-    top: 640px;
-    left: 850px;
+    width: 800px;
+    height: 760px;
+    top: 665px;
+    left: 1050px;
 
 }
 
@@ -208,7 +213,7 @@ transform: scale(1.1,1.1);
 }
 
 #impactos #titulo{
-    padding-left: 33%;
+    padding-left: 32%;
     display: flex;
     flex-direction: row;
 }
@@ -332,4 +337,61 @@ transform: scale(1.1,1.1);
     font-size: 20px;
     color: black;
     text-align: center;
+}
+
+@media(max-width:1366px) {
+    #fundo_coleta_seletiva #fundo_branco_coleta_seletiva #coleta_seletiva #videos iframe{
+    width: 40%;
+    height: 150px;
+    border: 1px solid black
+}
+    #fundo_destino_materiais #fundo_destino_dentro #destino iframe{
+    width: 22%;
+    height: 150px;
+    margin-left: 25px;
+    margin-top: 100px;
+    border: 1px black solid
+
+}
+
+#imagem{
+    position: absolute;
+    width: 680px;
+    height: 760px;
+    top: 665px;
+    left: 650px;
+
+}
+
+#impactos #estatisticas .caixas a p{
+    width: 80%;
+    padding-top: 20px;
+    padding-left: 35px;
+    font-size: 18px;
+    color: white;
+}
+
+#impactos #estatisticas2 .caixas a p{
+    width: 80%;
+    padding-top: 20px;
+    padding-left: 35px;
+    font-size: 18px;
+    color: white;
+}
+
+#impactos #titulo{
+    padding-left: 26%;
+    display: flex;
+    flex-direction: row;
+}
+
+#panorama #titulo{
+    padding-top: 10px;
+    padding-left: 27%;
+    display: flex;
+    flex-direction: row;
+}
+
+
+
 }

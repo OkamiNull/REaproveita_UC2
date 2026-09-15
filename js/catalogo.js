@@ -242,6 +242,9 @@ function carregarCatalogo() {
 
     produtos.forEach(function(produto) {
 
+        const vendedor = getContaPorId(produto.vendedorId);
+        const fotoVendedor = (vendedor && vendedor.foto) ? vendedor.foto : "https://i.pravatar.cc/100?img=12";
+
         catalogo.innerHTML += `
             <div class="card"  data-categoria="${produto.tipoMaterial}" data-quantidade="${produto.quantidade}" data-preco="${produto.preco}">
                     <img class="card-image" src="${produto.foto}" alt="Fardos de papelão">
@@ -251,7 +254,7 @@ function carregarCatalogo() {
                         <div class="card-info">📍 ${produto.localizacao}</div>
                         <div class="card-price">R$ ${produto.preco}/kg</div>
                         <div class="card-footer">
-                            <img class="avatar" src="https://i.pravatar.cc/100?img=12" alt="Usuário">
+                            <img class="avatar" src="${fotoVendedor}" alt="Usuário">
                             <button class="btn-details" onclick="abrirModal('${produto.id}', event)">Ver detalhes</button>
                         </div>
                     </div>
@@ -370,7 +373,6 @@ function aplicarFiltros() {
     });
 }
 
-let produtoAtual = null;
 
 function abrirModal(idProduto, event) {
     event.preventDefault();
@@ -380,6 +382,11 @@ function abrirModal(idProduto, event) {
 
     if (!produto) return;
 
+
+    const vendedor = getContaPorId(produto.vendedorId);
+    const nomeVendedor = vendedor ? (vendedor.nome || vendedor.razaoSocial) : `Vendedor #${produto.vendedorId}`;
+    const fotoVendedor = (vendedor && vendedor.foto) ? vendedor.foto : "https://i.pravatar.cc/100?img=12";
+
     produtoAtual = {
         titulo: produto.nome,
         pesoUnitario: Number(produto.quantidade),
@@ -388,8 +395,8 @@ function abrirModal(idProduto, event) {
         precoTexto: `R$ ${Number(produto.preco).toFixed(2).replace('.', ',')}/kg`,
         precoNum: Number(produto.preco),
         vendedor: `Vendedor #${produto.vendedorId}`,
-        avaliacao: "⭐ Sem avaliações ainda",
-        fotoVendedor: "https://i.pravatar.cc/100?img=12",
+        avaliacao: " Sem avaliações ainda",
+        fotoVendedor: fotoVendedor,
         imgPrincipal: produto.foto,
         thumbs: [produto.foto]
     };

@@ -53,6 +53,20 @@
             <h2>Criar Conta</h2>
             
             <form class="register-form" id="formCadastroUsuario">
+
+                <!-- foto de perfil -->
+                <div class="form-section-title">foto de perfil</div>
+                <div class="file-upload-container">
+                    <label for="foto-perfil" class="custom-file-upload">
+                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="17 8 12 3 7 8"></polyline>
+                            <line x1="12" y1="3" x2="12" y2="15"></line>
+                        </svg>
+                        <span id="nome-arquivo">anexar uma foto...</span>
+                    </label>
+                    <input type="file" id="foto-perfil" accept="image/*" hidden>
+                </div>
                 
                 <!-- dados pessoais -->
                 <div class="form-section-title">dados pessoais</div>
