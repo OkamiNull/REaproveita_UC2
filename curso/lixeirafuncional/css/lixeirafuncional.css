@@ -14,7 +14,6 @@ body{
 
 
 #lixeiras{
-    border: 1px solid black;
     position: relative;
     width: 57%;
     margin: 0 auto;
@@ -53,7 +52,6 @@ body{
 }
 
 #lixos{
-    border: black solid 1px;
     position: relative;
     width: 70%;
     height: 183px;
@@ -101,7 +99,6 @@ body{
 
 @media(max-width:1366px) {
     #lixeiras{
-    border: 1px solid black;
     position: relative;
     width: 57%;
     margin: 0 auto;
@@ -125,7 +122,6 @@ body{
 }
 
 #lixos{
-    border: black solid 1px;
     position: relative;
     width: 70%;
     height: 183px;

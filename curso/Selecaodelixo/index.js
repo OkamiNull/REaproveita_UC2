@@ -46,6 +46,7 @@ lixo2.addEventListener('click', function(){
     video.height = "155px"
     texto.appendChild(video)
 
+
 })
 
 lixo3.addEventListener('click', function(){
